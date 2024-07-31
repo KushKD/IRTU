@@ -2,411 +2,556 @@
 <%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
-
-<script src="${pageContext.request.contextPath}/resources/js/flowchakra/jquery-3.6.4.min.js"></script>
-
-
-<!--hero section start-->
-<section class="gshop-hero pt-120 bg-white position-relative z-1 overflow-hidden">
-   <img src="${pageContext.request.contextPath}/resources/images/flowchakra_main/leaf-shadow.png" alt="leaf" class="position-absolute leaf-shape z--1 rounded-circle d-none d-lg-inline">
-   <img src="${pageContext.request.contextPath}/resources/images/flowchakra_main/mango.png" alt="mango" class="position-absolute mango z--1" data-parallax="{" y":="" -120}"="">
-   <img src="${pageContext.request.contextPath}/resources/images/flowchakra_main/hero-circle-sm.png" alt="circle" class="position-absolute hero-circle circle-sm z--1 d-none d-md-inline">
-
-
-   <div class="container">
-      <div class="gshop-hero-slider swiper">
-         <div class="swiper-wrapper">
-            <div class="swiper-slide gshop-hero-single">
-               <div class="row align-items-center justify-content-between">
-                  <div class="col-xl-5 col-lg-7">
-                     <div class="hero-left-content">
-                        <span class="gshop-subtitle fs-5 text-secondary mb-2 d-block">Get your Chakra from FlowChakra</span>
-                        <h1 class="display-4 mb-3">Discover the Magic of Flow</h1>
-                        <p class="mb-5 fs-6">Get away from your screen and get into nature with your FlowChakra to experience your unique and personal self.</p>
-                        <div class="hero-btns d-flex align-items-center gap-3 gap-sm-5 flex-wrap">
-                           <a href="https://www.youtube.com/watch?v=JXQnONhvy8U" class="btn btn-secondary">Explore Now<span class="ms-2"><i class="fa-solid fa-arrow-right"></i></span></a>
-                           <a href="${pageContext.request.contextPath}/about" class="btn btn-primary">About Us<span class="ms-2"><i class="fa-solid fa-arrow-right"></i></span></a>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="col-xl-6 col-lg-5">
-                     <div class="hero-right text-center position-relative z-1 mt-6 mt-xl-0">
-                        <img src="${pageContext.request.contextPath}/resources/images/flowchakra_main/pe7IKeIfimi4Y81fTfFLupbRk2wQ5UcPzctoVeay.png" alt="" class="img-fluid position-absolute end-0 top-50 hero-img">
-                        <img src="${pageContext.request.contextPath}/resources/images/flowchakra_main/hero-circle-lg.png" alt="circle shape" class="img-fluid hero-circle">
-                     </div>
-                  </div>
+<main>
+   <section class="section-hero slider">
+      <div class="hero">
+         <div class="hero-text-box">
+            <h1 class="heading-primary">USHMA WELLNESS RETREAT</h1>
+            <p class="hero-description">
+               A Bluezone Valley Offering Holistic Wellness and Unmatched Comfort
+            </p>
+            <a href="#" class="btn btn--full margin-right-sm">Book Your Stay</a>
+            <a href="#" class="btn btn--outline">Learn more &darr;</a>
+            <div class="delivered-meals">
+               <div class="delivered-imgs">
+                  <img
+                     src="${pageContext.request.contextPath}/resources/images/ushma/customers/customer-1.jpg"
+                     alt="Customer photo"
+                     />
+                  <img
+                     src="${pageContext.request.contextPath}/resources/images/ushma/customers/customer-2.jpg"
+                     alt="Customer photo"
+                     />
+                  <img
+                     src="${pageContext.request.contextPath}/resources/images/ushma/customers/customer-3.jpg"
+                     alt="Customer photo"
+                     />
+                  <img
+                     src="${pageContext.request.contextPath}/resources/images/ushma/customers/customer-4.jpg"
+                     alt="Customer photo"
+                     />
+                  <img
+                     src="${pageContext.request.contextPath}/resources/images/ushma/customers/customer-5.jpg"
+                     alt="Customer photo"
+                     />
+                  <img
+                     src="${pageContext.request.contextPath}/resources/images/ushma/customers/customer-6.jpg"
+                     alt="Customer photo"
+                     />
+               </div>
+               <p class="delivered-text"><span>2,500+</span> Happy Customers!</p>
+            </div>
+         </div>
+      </div>
+   </section>
+   <section class="section-featured">
+      <div class="container">
+         <h2 class="heading-featured-in">Featured in</h2>
+         <div class="logos">
+            <img src="${pageContext.request.contextPath}/resources/images/ushma/logos/TripAdvisor.png" alt="Trip Advisor logo" />
+            <img src="${pageContext.request.contextPath}/resources/images/ushma/logos/Makemytrip.png" alt="Make My Trip Logo" />
+            <img src="${pageContext.request.contextPath}/resources/images/ushma/logos/Trip.com.png" alt="Trip Logo" />
+            <img src="${pageContext.request.contextPath}/resources/images/ushma/logos/Agoda.png" alt="Agora logo" />
+            <img src="${pageContext.request.contextPath}/resources/images/ushma/logos/Thomas.jpg" alt="Thomas Cook logo" />
+         </div>
+      </div>
+   </section>
+   <!-- Section Wellness Tharipies-->
+   <section
+      class="container text-center"
+      style="padding: 10px; margin-top: 60px"
+      >
+      <span class="subheading center-text"> Gatherings & Events</span>
+      <h2 class="heading-secondary center-text" style="color: #545454">
+         Upcoming Events
+      </h2>
+      <div class="grid grid--2-cols">
+         <!-- Upcoming events grid -->
+         <div class="scroll-container">
+            <div class="homes">
+               <div class="home">
+                  <img
+                     src="${pageContext.request.contextPath}/resources/images/ushma/events/event-food.jpg"
+                     alt="House 1"
+                     class="home__img"
+                     />
+                  <h5 class="home__name">Organic Food Events</h5>
                </div>
             </div>
          </div>
-      </div>
-   </div>
-  <!-- <div class="at-header-social d-none d-xl-flex align-items-center position-absolute">
-      <span class="title fw-medium">Follow on</span>
-      <ul class="social-list ms-3">
-         <li>
-            <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
-         </li>
-         <li><a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a></li>
-         <li><a href="https://www.youtube.com/watch?v=JXQnONhvy8U" target="_blank"><i class="fab fa-youtube"></i></a></li>
-      </ul>
-   </div>
-   <div class="gshop-hero-slider-pagination theme-slider-control position-absolute top-50 translate-middle-y z-5">
-   </div> -->
-</section>
-<!--hero section end-->
-
-
-
-<!--featured products start-->
-<section class="featured-products pt-120 pb-200 bg-shade position-relative overflow-hidden z-1">
-   <img src="${pageContext.request.contextPath}/resources/images/flowchakra_main/roll-1.png" alt="roll" class="position-absolute roll-1 z--1" data-parallax="{" y":="" -120}"="">
-   <img src="${pageContext.request.contextPath}/resources/images/flowchakra_main/roll-2.png" alt="roll" class="position-absolute roll-2 z--1" data-parallax="{" y":="" 120}"="">
-   <div class="container">
-      <div class="row justify-content-center">
-         <div class="col-xl-6">
-            <div class="section-title text-center mb-4">
-               <h3 class="mb-2">Our Featured Products</h3>
-               <p class="mb-0">Platform mindshare through effective infomediaries Dynamically implement.</p>
+         <!-- Upcoming events grid -->
+         <div
+            class="marquee-container"
+            style="margin: 8rem 0; background-color: #FFF"
+            >
+            <div>
+               <h2 class="heading">Upcoming Events</h2>
+            </div>
+            <div class="marquee">
+               <div class="event">
+                  <h5 class="event__name">Upcoming Event 1</h5>
+                  <p class="event__details">Details about upcoming event 1.</p>
+               </div>
+               <div class="event">
+                  <h5 class="event__name">Upcoming Event 2</h5>
+                  <p class="event__details">Details about upcoming event 2.</p>
+               </div>
+               <div class="event">
+                  <h5 class="event__name">Upcoming Event 3</h5>
+                  <p class="event__details">Details about upcoming event 3.</p>
+               </div>
+               <div class="event">
+                  <h5 class="event__name">Upcoming Event 4</h5>
+                  <p class="event__details">Details about upcoming event 4.</p>
+               </div>
+               <div class="event">
+                  <h5 class="event__name">Upcoming Event 5</h5>
+                  <p class="event__details">Details about upcoming event 5.</p>
+               </div>
             </div>
          </div>
-      </div>
-      <div class="row g-4 justify-content-center ">
-         <!-- Left Column Starts -->
-         <div class="col-xxl-4 col-lg-6" id="featuredLeft">
-
-         </div>
-         <!-- Left Column Ends -->
-
-
-         <!-- banner -->
-         <div class="col-xxl-4 col-lg-6 order-3 order-xxl-2 d-none d-xl-block d-none-1399">
-            <div class="product-card-lg bg-light rounded-2 d-flex flex-column h-100">
-               <a href="${pageContext.request.contextPath}/products" class="my-auto">
-               <img style="max-width:420px; max-height:330px; padding:30px; margin-left:40px;" src="${pageContext.request.contextPath}/resources/images/flowchakra_main/pe7IKeIfimi4Y81fTfFLupbRk2wQ5UcPzctoVeay.png" alt="Products">
-               </a>
-            </div>
-         </div>
-         <!-- right column -->
-         <div class="col-xxl-4 col-lg-6 order-2 order-xxl-3" id="featuredRight">
-
-
-         </div>
-         <!-- right column ends -->
-      </div>
+   </section>
+   <!-- Section Wellness Tharies End-->
+   <section class="section-meals">
+   <div class="container center-text">
+   <span class="subheading">Room Types</span>
+   <h2 class="heading-secondary" style="color: #545454">
+   Hotel Rooms Available
+   </h2>
    </div>
-   <img src="${pageContext.request.contextPath}/resources/images/flowchakra_main/bg-shape-2.png" alt="bg shape" class="position-absolute start-0 bottom-0 w-100 z--1">
-</section>
-<!--featured products end-->
-
-
-
-<!--trending products start-->
-<section class="pt-8 pb-100 bg-white position-relative overflow-hidden z-1 trending-products-area">
-   <img src="${pageContext.request.contextPath}/resources/images/flowchakra_main/garlic.png" alt="garlic" class="position-absolute garlic z--1" data-parallax="{" y":="" 100}"="">
-   <img src="${pageContext.request.contextPath}/resources/images/flowchakra_main/carrot.png" alt="carrot" class="position-absolute carrot z--1" data-parallax="{" y":="" -100}"="">
-   <img src="${pageContext.request.contextPath}/resources/images/flowchakra_main/mashrom.png" alt="mashrom" class="position-absolute mashrom z--1" data-parallax="{" x":="" 100}"="">
-   <div class="container">
-      <div class="row align-items-center">
-         <div class="col-xl-5">
-            <div class="section-title text-center text-xl-start">
-               <h3 class="mb-0">Top Trending Products</h3>
-            </div>
-         </div>
-         <div class="col-xl-7">
-            <div class="filter-btns gshop-filter-btn-group text-center text-xl-end mt-4 mt-xl-0">
-               <button class="active" data-filter="*">All Products</button>
-               <button data-filter=".1">Flowchakra</button>
-            </div>
-         </div>
-      </div>
-      <div class="row justify-content-center g-4 mt-5 filter_group" id="trendingProductContainer">
-
-      </div>
+   <div class="container grid grid--3-cols margin-bottom-md">
+   <div class="meal">
+   <img src="${pageContext.request.contextPath}/resources/images/ushma/rooms/room1.jpg" class="meal-img" alt="Suits" />
+   <div class="meal-content">
+   <div class="meal-tags">
+   <span class="tag tag--vegetarian">In-room yoga</span>
+   <span class="tag tag--paleo">Nature Retreate</span>
    </div>
-</section>
-<!--trending products end-->
-<!--banner section start-->
-<section class="banner-section position-relative z-1 overflow-hidden bg-white">
-   <img src="${pageContext.request.contextPath}/resources/images/flowchakra_main/bg-shape-3.png" alt="bg shape" class="position-absolute start-0 bottom-0 z--1 w-100">
-   <div class="container">
-      <div class="row align-items-center g-4">
-      </div>
+   <p class="meal-title">Superior Rooms</p>
+   <ul class="meal-attributes">
+   <li class="meal-attribute">
+   <ion-icon class="meal-icon" name="flame-outline"></ion-icon>
+   <span><strong>10000/- </strong> per night</span>
+   </li>
+   <li class="meal-attribute">
+   <ion-icon
+      class="meal-icon"
+      name="restaurant-outline"
+      ></ion-icon>
+   <span>Wellness Score &reg; <strong>94</strong></span>
+   </li>
+   <li class="meal-attribute">
+   <ion-icon class="meal-icon" name="star-outline"></ion-icon>
+   <span><strong>4.9</strong> rating (537)</span>
+   </li>
+   </ul>
    </div>
-</section>
-<!--banner section end-->
-
-<!--banner 2 section start-->
-<section class="position-relative banner-section z-1 overflow-hidden">
-   <img src="${pageContext.request.contextPath}/resources/images/flowchakra_main/bg-shape-4.png" alt="bg shape" class="position-absolute start-0 bottom-0 w-100 z--1">
-   <div class="container">
-      <div class="row g-4">
-         <div class="col-xl-8">
-            <a href="">
-            </a>
-         </div>
-         <div class="col-xl-4 d-none d-xl-block">
-            <a href="">
-            </a>
+   </div>
+   <div class="meal">
+   <img
+      src="${pageContext.request.contextPath}/resources/images/ushma/rooms/room2.jpg"
+      class="meal-img"
+      alt="Avocado Salad"
+      />
+   <div class="meal-content">
+   <div class="meal-tags">
+   <span class="tag tag--vegan">YOGA</span>
+   <span class="tag tag--paleo">Wellness</span>
+   </div>
+   <p class="meal-title">Deluxe Rooms</p>
+   <ul class="meal-attributes">
+   <li class="meal-attribute">
+   <ion-icon class="meal-icon" name="flame-outline"></ion-icon>
+   <span><strong>6000/- </strong> per night</span>
+   </li>
+   <li class="meal-attribute">
+   <ion-icon
+      class="meal-icon"
+      name="restaurant-outline"
+      ></ion-icon>
+   <span>Wellness Score &reg; <strong>92</strong></span>
+   </li>
+   <li class="meal-attribute">
+   <ion-icon class="meal-icon" name="star-outline"></ion-icon>
+   <span><strong>4.8</strong> rating (441)</span>
+   </li>
+   </ul>
+   </div>
+   </div>
+   <div class="diets">
+   <h3 class="heading-tertiary" style="color: #545454">Amenities:</h3>
+   <ul class="list">
+   <li class="list-item">
+   <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
+   <span> <i class="fas fa-wifi"></i> &nbsp; Free WiFi</span>
+   </li>
+   <li class="list-item">
+   <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
+   <span>
+   <i class="fa-solid fa-lock"></i> &nbsp;In-Room Safe</span
+      >
+   </li>
+   <li class="list-item">
+   <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
+   <span>
+   <i class="fa-solid fa-desktop"></i> &nbsp; Workstations </span
+      >
+   </li>
+   <li class="list-item">
+   <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
+   <span>
+   <i class="fa-sun-o"></i> &nbsp; Central Room Heating</span
+      >
+   </li>
+   <li class="list-item">
+   <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
+   <span>
+   <i class="fa-solid fa fa-car"></i> &nbsp; 24x7  Transportation</span
+      >
+   </li>
+   <li class="list-item">
+   <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
+   <span> <i class="fa-solid fa fa-cutlery"></i> &nbsp; Roof Top Resturant (360 View)</span>
+   </li>
+   <li class="list-item">
+   <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
+   <span>
+   <i class="fa-solid fa fa-tint"></i> &nbsp; All Weather Swimming Pool
+   </span
+      >
+   </li>
+   <li class="list-item">
+   <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
+   <span>
+   <i class="fa-solid fa fa-child"></i>
+   &nbsp; Special Child Care Facility</span
+      >
+   </li>
+   <li class="list-item">
+   <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
+   <span>
+   <i class="fa-solid fa-futbol-o"></i>
+   &nbsp; 25+ Sports and Activities </span
+      >
+   </li>
+   <li class="list-item">
+   <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
+   <span>
+   <i class="fa-solid fa-car"></i>
+   &nbsp; Car parking and Washing </span
+      >
+   </li>
+   </ul>
+   </div>
+   </div>
+   <div class="container grid">
+   <aside class="plan-details">
+   Prices include all applicable taxes. You can cancel at any time.
+   Both plans include the following:
+   </aside>
+   </div>
+   <div class="container grid grid--4-cols">
+   <div class="feature">
+   <ion-icon class="feature-icon" name="infinite-outline"></ion-icon>
+   <p class="feature-title">Food and Cuisine</p>
+   <p class="feature-text">
+   Rejuvenate Your Spirit: Experience VAT, PIT, and KAF Yoga Retreats at Our Hotel!
+   </p>
+   </div>
+   <div class="feature">
+   <ion-icon class="feature-icon" name="nutrition-outline"></ion-icon>
+   <p class="feature-title">Local and organic</p>
+   <p class="feature-text">
+   Our cooks only use local, fresh, and organic products to prepare
+   your meals.
+   </p>
+   </div>
+   <div class="feature">
+   <ion-icon class="feature-icon" name="leaf-outline"></ion-icon>
+   <p class="feature-title">Events</p>
+   <p class="feature-text">
+   All our partners only use reusable containers to package all your
+   meals.
+   </p>
+   </div>
+   <div class="feature">
+   <ion-icon class="feature-icon" name="pause-outline"></ion-icon>
+   <p class="feature-title">Wellness Therepies</p>
+   <p class="feature-text">
+   Going on vacation? Just pause your subscription, and we refund
+   unused days.
+   </p>
+   </div>
+   </div>
+   <div class="container all-recipes">
+   <a href="#" class="link">View More &rarr;</a>
+   </div>
+   </section>
+   <section style="display:grid;  margin-bottom: 10rem;" class="container grid--2-col grid--center-v">
+   <div>
+   <div class="story__pictures grid">
+   <img src="${pageContext.request.contextPath}/resources/images/ushma/story/sports1.jpg" alt="Couple with new house" class="story__img--1">
+   </div>
+   </div>
+   </div>
+   <div class="story__content">
+   <div class="container center-text" style="padding:1rem">
+   <span class="subheading">Fun and Energy</span>
+   <h2 class="heading-secondary" style="color: #545454">
+   Sports & Amenities
+   </h2>
+   </div>
+   <div style="display: grid;" class="container grid--3-cols margin-bottom-md">
+   <div class="diets" >
+   <h3 class="heading-tertiary" style="color: #545454">YOGA</h3>
+   <ul class="list">
+   <li class="list-item">
+   <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
+   <span>  YOGA</span>
+   </li>
+   <li class="list-item">
+   <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
+   <span
+      > SPA</span
+      >
+   </li>
+   <li class="list-item">
+   <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
+   <span>
+   SONA</span
+      >
+   </li>
+   </ul>
+   </div>
+   <div class="diets">
+   <h3 class="heading-tertiary" style="color: #545454">Indoor</h3>
+   <ul class="list">
+   <li class="list-item">
+   <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
+   <span> Chess</span>
+   </li>
+   <li class="list-item">
+   <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
+   <span
+      > Childrenzone</span
+      >
+   </li>
+   <li class="list-item">
+   <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
+   <span>
+   Gymnesium</span
+      >
+   </li>
+   </ul>
+   </div>
+   <div class="diets">
+   <h3 class="heading-tertiary" style="color: #545454">Outdoor</h3>
+   <ul class="list">
+   <li class="list-item">
+   <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
+   <span>Badminton</span>
+   </li>
+   <li class="list-item">
+   <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
+   <span
+      > Volleyball</span
+      >
+   </li>
+   <li class="list-item">
+   <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
+   <span>
+   Basketball</span
+      >
+   </li>
+   <li class="list-item">
+   <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
+   <span>
+   Swimming</span
+      >
+   </li>
+   <li class="list-item">
+   <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
+   <span>
+   Foxfly/Zipline</span
+      >
+   </li>
+   <li class="list-item">
+   <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
+   <span>
+   Biking</span
+      >
+   </li>
+   <li class="list-item">
+   <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
+   Hiking</span>
+   </li>
+   <li class="list-item">
+   <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
+   <span>
+   Treking  </span
+      >
+   </li>
+   </ul>
+   </div>
+   </div>
+   </div>
+   </div>
+   </section>
+   <!-- Image Galary -->
+   <section class="gallery">
+      <figure class="gallery__item gallery__item--1">
+         <img
+            src="${pageContext.request.contextPath}/resources/images/ushma/gallery/gal-1.jpeg"
+            alt="Gallery image 1"
+            class="gallery__img"
+            />
+      </figure>
+      <figure class="gallery__item gallery__item--2">
+         <img
+            src="${pageContext.request.contextPath}/resources/images/ushma/gallery/gal-2.jpeg"
+            alt="Gallery image 2"
+            class="gallery__img"
+            />
+      </figure>
+      <figure class="gallery__item gallery__item--3">
+         <img
+            src="${pageContext.request.contextPath}/resources/images/ushma/gallery/gal-3.jpeg"
+            alt="Gallery image 3"
+            class="gallery__img"
+            />
+      </figure>
+      <figure class="gallery__item gallery__item--4">
+         <img
+            src="${pageContext.request.contextPath}/resources/images/ushma/gallery/gal-4.jpeg"
+            alt="Gallery image 4"
+            class="gallery__img"
+            />
+      </figure>
+      <figure class="gallery__item gallery__item--5">
+         <img
+            src="${pageContext.request.contextPath}/resources/images/ushma/gallery/gal-5.jpeg"
+            alt="Gallery image 5"
+            class="gallery__img"
+            />
+      </figure>
+      <figure class="gallery__item gallery__item--6">
+         <img
+            src="${pageContext.request.contextPath}/resources/images/ushma/gallery/gal-6.jpeg"
+            alt="Gallery image 6"
+            class="gallery__img"
+            />
+      </figure>
+      <figure class="gallery__item gallery__item--7">
+         <img
+            src="${pageContext.request.contextPath}/resources/images/ushma/gallery/gal-7.jpeg"
+            alt="Gallery image 7"
+            class="gallery__img"
+            />
+      </figure>
+      <figure class="gallery__item gallery__item--8">
+         <img
+            src="${pageContext.request.contextPath}/resources/images/ushma/gallery/gal-8.jpeg"
+            alt="Gallery image 8"
+            class="gallery__img"
+            />
+      </figure>
+      <figure class="gallery__item gallery__item--9">
+         <img
+            src="${pageContext.request.contextPath}/resources/images/ushma/gallery/gal-8.jpeg"
+            alt="Gallery image 9"
+            class="gallery__img"
+            />
+      </figure>
+      <figure class="gallery__item gallery__item--10">
+         <img
+            src="${pageContext.request.contextPath}/resources/images/ushma/gallery/gal-10.jpeg"
+            alt="Gallery image 10"
+            class="gallery__img"
+            />
+      </figure>
+      <figure class="gallery__item gallery__item--11">
+         <img
+            src="${pageContext.request.contextPath}/resources/images/ushma/gallery/gal-11.jpeg"
+            alt="Gallery image 11"
+            class="gallery__img"
+            />
+      </figure>
+      <figure class="gallery__item gallery__item--12">
+         <img
+            src="${pageContext.request.contextPath}/resources/images/ushma/gallery/gal-12.jpeg"
+            alt="Gallery image 12"
+            class="gallery__img"
+            />
+      </figure>
+      <figure class="gallery__item gallery__item--13">
+         <img
+            src="${pageContext.request.contextPath}/resources/images/ushma/gallery/gal-13.jpeg"
+            alt="Gallery image 13"
+            class="gallery__img"
+            />
+      </figure>
+      <figure class="gallery__item gallery__item--14">
+         <img
+            src="${pageContext.request.contextPath}/resources/images/ushma/gallery/gal-14.jpeg"
+            alt="Gallery image 14"
+            class="gallery__img"
+            />
+      </figure>
+   </section>
+   <!-- Image Galary Ends -->
+   <section class="section-cta">
+      <div class="container">
+         <div class="cta">
+            <div class="cta-text-box">
+               <h2 class="heading-secondary">Book Your First Stay with us:</h2>
+               <p class="cta-text">
+                  "Experience holistic wellness with our healthy, delicious, and
+                  hassle-free meals tailored for your yoga retreat. Begin your
+                  journey to well-being today with the flexibility to cancel or
+                  pause anytime. Plus, enjoy your first meal on us as you immerse
+                  in tranquility and rejuvenation."
+               </p>
+               <form class="cta-form" action="#">
+                  <div>
+                     <label for="full-name">Full Name</label>
+                     <input
+                        id="full-name"
+                        type="text"
+                        placeholder="John Smith"
+                        required
+                        />
+                  </div>
+                  <div>
+                     <label for="email">Email address</label>
+                     <input
+                        id="email"
+                        type="email"
+                        placeholder="me@example.com"
+                        required
+                        />
+                  </div>
+                  <div>
+                     <label for="select-where">Where did you hear from us?</label>
+                     <select id="select-where" required>
+                        <option value="">Please choose one option:</option>
+                        <option value="friends">Friends and family</option>
+                        <option value="youtube">YouTube video</option>
+                        <option value="podcast">Podcast</option>
+                        <option value="ad">Facebook ad</option>
+                        <option value="others">Others</option>
+                     </select>
+                  </div>
+                  <button class="btn btn--form">Sign up for Newsteller</button>
+                  <!-- <input type="checkbox" />
+                     <input type="number" /> -->
+               </form>
+            </div>
+            <div
+               class="cta-img-box"
+               role="img"
+               aria-label="Woman enjoying food"
+               ></div>
          </div>
       </div>
-   </div>
-</section>
-<!--banner 2 section end-->
-
-
-
-
-
-
- <!--feedback section start-->
-    <section class="ptb-120 bg-shade position-relative overflow-hidden z-1 feedback-section">
-    <img src="${pageContext.request.contextPath}/resources/images/flowchakra_main/bg-shape-5.png" alt="bg shape" class="position-absolute start-0 bottom-0 z--1 w-100">
-    <img src="${pageContext.request.contextPath}/resources/images/flowchakra_main/map-bg.png" alt="map" class="position-absolute start-50 top-50 translate-middle z--1">
-    <img src="${pageContext.request.contextPath}/resources/images/flowchakra_main/fd-1.png" alt="shape" class="position-absolute z--1 fd-1">
-    <img src="${pageContext.request.contextPath}/resources/images/flowchakra_main/fd-2.png" alt="shape" class="position-absolute z--1 fd-2">
-    <img src="${pageContext.request.contextPath}/resources/images/flowchakra_main/fd-3.png" alt="shape" class="position-absolute z--1 fd-3">
-    <img src="${pageContext.request.contextPath}/resources/images/flowchakra_main/fd-4.png" alt="shape" class="position-absolute z--1 fd-4">
-    <img src="${pageContext.request.contextPath}/resources/images/flowchakra_main/fd-5.png" alt="shape" class="position-absolute z--1 fd-5">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-xl-6">
-                <div class="section-title text-center">
-                    <h2 class="mb-6">What Our Clients Say</h2>
-                </div>
-            </div>
-            <div class="col-xl-8">
-                <div class="gshop-feedback-slider-wrapper">
-                    <div class="swiper gshop-feedback-thumb-slider">
-                        <div class="swiper-wrapper">
-                                                    </div>
-                    </div>
-                    <div class="swiper gshop-feedback-slider mt-4">
-                        <div class="swiper-wrapper">
-                                                    </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-    <!--feedback section end-->
-
-
-<script>
-$(document).ready(function() {
-    $.ajax({
-        url: "/api/fetchProductsTrending",
-        type: "GET",
-        data: {
-            page: 0,
-            size: 10
-        },
-        success: function(response) {
-            // Handle the successful response
-           // console.log(response);
-            var container = document.getElementById("trendingProductContainer");
-            response.data.forEach(function(product) {
-                var productCard = document.createElement("div");
-                productCard.className = "col-xxl-3 col-lg-4 col-md-6 col-sm-10 filter_item1" ;
-                //productCard.style.position = "absolute";
-                //productCard.style.left = "0px";
-                //productCard.style.top = "0px";
-
-                var innerHtml = "";
-                innerHtml += "<div class='vertical-product-card rounded-2 position-relative'>";
-
-                innerHtml += "<div class='thumbnail position-relative text-center p-4'>";
-                innerHtml += "<img style='max-width:150px; max-height:150px;'  src='${pageContext.request.contextPath}/downloadFile/" + product.productImage + "' alt='" + product.productName + "' class='img-fluid'/>";
-
-                    innerHtml += "<div class='product-btns position-absolute d-flex gap-2 flex-column'>";
-                        innerHtml += "<a href='javascript:void(0);' class='rounded-btn'>";
-                        innerHtml += "<i class='fa-regular fa-heart' onclick='addToWishlist(" + product.productId + ")'></i></a>";
-                        innerHtml += "<a href='javascript:void(0);' class='rounded-btn' onclick='showProductDetailsModal(" + product.productId + ")'>";
-                        innerHtml += "<i class='fa-regular fa-eye'></i></a>";
-                    innerHtml += "</div>";
-                    innerHtml += "</div>";
-
-                innerHtml += "<div class='card-content'>";
-                    innerHtml += "<div class='mb-2 tt-category tt-line-clamp tt-clamp-1'>";
-                    innerHtml += "<a href='#' class='d-inline-block text-muted fs-xxs'> Flowchakra </a>";
-                    innerHtml += "</div>";
-
-                    innerHtml += "<a href='javascript:void(0);' onclick='showProductDetailsModal(" + product.productId + ")' class='card-title fw-bold mb-2 tt-line-clamp tt-clamp-1'>" + product.productName + "</a>";
-                    innerHtml += "<h6 class='price'>";
-                    innerHtml += "<span class='fw-bold h4 text-danger'> &#8377;"+ product.productPrice + "</span>";
-                    innerHtml += "</h6>";
-                innerHtml += "</div>";
-
-                innerHtml += " <div class='card-btn bg-white'>";
-                  innerHtml += "<form action='' class='direct-add-to-cart-form'>";
-                   innerHtml += "<input type='hidden' value='1' name='quantity'>";
-                   innerHtml += "<input type='hidden' value='"+ product.productId + "' name='product_variation_id'>";
-                   innerHtml += "<a href='javascript:void(0);' onclick='directAddToCartFormSubmit(this)' class='fs-xs fw-bold mt-10 d-inline-block explore-btn direct-add-to-cart-btn'>";
-                   innerHtml +="<span class='add-to-cart-text'>Buy Now</span>";
-                   innerHtml += "<span class='ms-1'><i class='fa-solid fa-arrow-right'></i></span>"
-
-                   innerHtml += "</form>";
-               innerHtml += "</div>";
-
-                innerHtml += "</div></div>";
-
-                // Set the innerHTML of the product card
-                productCard.innerHTML = innerHtml;
-
-                // Append the product card to the container
-                container.appendChild(productCard);
-            });
-        },
-        error: function(xhr, status, error) {
-            // Handle errors
-           // console.error("Error:", error);
-            // Optionally, you can display an error message on the page
-            var container = document.getElementById("trendingProductContainer");
-            container.innerHTML = "<p>Error loading products. Please try again later.</p>";
-        }
-    });
-});
-</script>
-
-
-
-
-
-<script>
-$(document).ready(function() {
-    $.ajax({
-        url: "/api/fetchProductsFeatured",
-        type: "GET",
-        data: {
-            page: 0,
-            size: 2
-        },
-        success: function(response) {
-            // Handle the successful response
-          //  console.log(response);
-            var container = document.getElementById("featuredLeft");
-            response.data.forEach(function(product) {
-                var productCard = document.createElement("div");
-
-
-                var innerHtml = "";
-                innerHtml += "<div class='mb-3'>";
-                innerHtml += "<div class='horizontal-product-card d-sm-flex align-items-center p-3 bg-white rounded-2 border card-md gap-4'>";
-
-
-                innerHtml += "<div class='thumbnail position-relative rounded-2'>";
-                    innerHtml += "<a href='javascript:void(0);'><img src=${pageContext.request.contextPath}/downloadFile/" + product.productImage + " alt='product.productName' class='img-fluid'></a>";
-                    innerHtml += "<div class='product-overlay position-absolute start-0 top-0 w-100 h-100 d-flex align-items-center justify-content-center gap-1 rounded-2'>";
-                        innerHtml += "<a href='javascript:void(0);' class='rounded-btn fs-xs'>";
-                        innerHtml += "<i class='fa-regular fa-heart' onclick='addToWishlist(" + product.productId + ")'></i></a>";
-                        innerHtml += "<a href='javascript:void(0);' class='rounded-btn fs-xs' onclick='showProductDetailsModal(" + product.productId + ")'>";
-                        innerHtml += "<i class='fa-regular fa-eye'></i></a>";
-                    innerHtml += "</div>";
-                innerHtml += "</div>";
-
-                innerHtml += "<div class='card-content mt-4 mt-sm-0'>";
-                    innerHtml += "<a href='javascript:void(0);' onclick='showProductDetailsModal(" + product.productId + ")' class='fw-bold text-heading title fs-sm tt-line-clamp tt-clamp-1'>" + product.productName + "</a>";
-                        innerHtml += "<div class='pricing mt-2'>";
-                        innerHtml += "<span class='fw-bold h4 text-danger'> &#8377;"+ product.productPrice + "</span>";
-                        innerHtml += "</div>";
-
-                   innerHtml += "<form action='' class='direct-add-to-cart-form'>";
-                   innerHtml += "<input type='hidden' value='1' name='quantity'>";
-                   innerHtml += "<input type='hidden' value='"+ product.productId + "' name='product_variation_id'>";
-                   innerHtml += "<a href='javascript:void(0);' onclick='directAddToCartFormSubmit(this)' class='fs-xs fw-bold mt-10 d-inline-block explore-btn direct-add-to-cart-btn'>";
-                   innerHtml +="<span class='add-to-cart-text'>Buy Now</span>";
-                   innerHtml += "<span class='ms-1'><i class='fa-solid fa-arrow-right'></i></span>"
-
-                   innerHtml += "</form>";
-                innerHtml += "</div>";
-
-                innerHtml += "</div>";
-
-                // Set the innerHTML of the product card
-                productCard.innerHTML = innerHtml;
-
-                // Append the product card to the container
-                container.appendChild(productCard);
-            });
-        },
-        error: function(xhr, status, error) {
-            // Handle errors
-           // console.error("Error:", error);
-            // Optionally, you can display an error message on the page
-            var container = document.getElementById("trendingProductContainer");
-            container.innerHTML = "<p>Error loading products. Please try again later.</p>";
-        }
-    });
-});
-</script>
-
-
-<script>
-$(document).ready(function() {
-    $.ajax({
-        url: "/api/fetchProductsFeatured",
-        type: "GET",
-        data: {
-            page: 0,
-            size: 2
-        },
-        success: function(response) {
-            // Handle the successful response
-           // console.log(response);
-            var container = document.getElementById("featuredRight");
-            response.data.forEach(function(product) {
-                var productCard = document.createElement("div");
-
-
-                var innerHtml = "";
-                innerHtml += "<div class='mb-3'>";
-                innerHtml += "<div class='horizontal-product-card d-sm-flex align-items-center p-3 bg-white rounded-2 border card-md gap-4'>";
-
-
-                innerHtml += "<div class='thumbnail position-relative rounded-2'>";
-                 innerHtml += "<a href='javascript:void(0);'><img src=${pageContext.request.contextPath}/downloadFile/" + product.productImage + " alt='product.productName' class='img-fluid'></a>";
-                  innerHtml += "<div class='product-overlay position-absolute start-0 top-0 w-100 h-100 d-flex align-items-center justify-content-center gap-1 rounded-2'>";
-                        innerHtml += "<a href='javascript:void(0);' class='rounded-btn fs-xs'>";
-                        innerHtml += "<i class='fa-regular fa-heart' onclick='addToWishlist(" + product.productId + ")'></i></a>";
-                        innerHtml += "<a href='javascript:void(0);' class='rounded-btn fs-xs' onclick='showProductDetailsModal(" + product.productId + ")'>";
-                        innerHtml += "<i class='fa-regular fa-eye'></i></a>";
-                    innerHtml += "</div>";
-                innerHtml += "</div>";
-
-                innerHtml += "<div class='card-content mt-4 mt-sm-0'>";
-                    innerHtml += "<a href='javascript:void(0);' onclick='showProductDetailsModal(" + product.productId + ")' class='fw-bold text-heading title fs-sm tt-line-clamp tt-clamp-1'>" + product.productName + "</a>";
-                        innerHtml += "<div class='pricing mt-2'>";
-                        innerHtml += "<span class='fw-bold h4 text-danger'> &#8377;"+ product.productPrice + "</span>";
-                        innerHtml += "</div>";
-
-innerHtml += "<form action='' class='direct-add-to-cart-form'>";
-innerHtml += "<input type='hidden' value='1' name='quantity'>";
-innerHtml += "<input type='hidden' value='"+ product.productId + "' name='product_variation_id'>";
-innerHtml += "<a href='javascript:void(0);' onclick='directAddToCartFormSubmit(this)' class='fs-xs fw-bold mt-10 d-inline-block explore-btn direct-add-to-cart-btn'>";
-innerHtml +="<span class='add-to-cart-text'>Buy Now</span>";
-innerHtml += "<span class='ms-1'><i class='fa-solid fa-arrow-right'></i></span>"
-
-innerHtml += "</form>";
-
-
-                innerHtml += "</div>";
-
-                innerHtml += "</div>";
-
-                // Set the innerHTML of the product card
-                productCard.innerHTML = innerHtml;
-
-                // Append the product card to the container
-                container.appendChild(productCard);
-            });
-        },
-        error: function(xhr, status, error) {
-            // Handle errors
-           // console.error("Error:", error);
-            // Optionally, you can display an error message on the page
-            var container = document.getElementById("trendingProductContainer");
-            container.innerHTML = "<p>Error loading products. Please try again later.</p>";
-        }
-    });
-});
-</script>
+   </section>
+</main>

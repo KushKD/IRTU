@@ -5,12 +5,12 @@
 
 // array of images
 var slides = [
-  { src: "/images/beauty.jpg" },
-  { src: "/images/yoga2.jpg" },
-  { src: "/images/healing.jpg" },
+  { src: "/resources/images/ushma/beauty.jpg" },
+  { src: "/resources/images/ushma/yoga2.jpg" },
+  { src: "/resources/images/ushma/healing.jpg" },
   {
     video: {
-      src: ["/images/budha.mp4"],
+      src: ["/resources/images/ushma/budha.mp4"],
       loop: true,
       mute: true,
     },
@@ -22,7 +22,7 @@ $(".slider").vegas({
   cover: true,
   trasition: "fade",
   slides: slides,
-  overlay: "images/07.png",
+  overlay: "/resources/images/ushma/07.png",
 });
 
 //Slider Image size :-
