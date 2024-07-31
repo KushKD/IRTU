@@ -10,16 +10,12 @@
 	</parent>
 	<groupId>com.kcdhawan.utri</groupId>
 	<artifactId>IRTU_ECO</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.1</version>
 	<packaging>war</packaging>
 	<name>IRTU_ECO</name>
 	<description>IRTU ECO System Powered by KC Dhawan</description>
 	<properties>
 		<java.version>1.8</java.version>
-		<deploy.wildfly.host>127.0.0.1</deploy.wildfly.host>
-		<deploy.wildfly.port>9990</deploy.wildfly.port>
-		<deploy.wildfly.username>wildfly</deploy.wildfly.username>
-		<deploy.wildfly.password>w1ldfly</deploy.wildfly.password>
 	</properties>
 	<dependencies>
 		<dependency>
