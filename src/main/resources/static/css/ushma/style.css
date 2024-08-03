@@ -1044,6 +1044,13 @@ font-weight: 500;
     background-position: center;
   }
 
+  .backgrad_reg{
+   background-image:
+       url("/resources/images/ushma/registration.jpg");
+      background-size: cover;
+      background-position: center;
+  }
+
   .activate{
   display: block;
     font-size: 1.6rem;
