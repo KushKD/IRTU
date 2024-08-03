@@ -947,7 +947,7 @@ gap: 10px;}
   line-height: 1.2;
 }
 
-
+background-image: linear-gradient(to right bottom, #eb984e, #e67e22);
 .grid-login {
   display: grid;
   row-gap: 1.6rem;
@@ -965,5 +965,65 @@ font-weight: 500;
      letter-spacing: -0.5px;
      margin-bottom:1rem;
 
+}
 
+
+
+
+.cta-login {
+ display: grid;
+  grid-template-columns: 2fr 1fr;
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);
+  border-radius: 11px;
+
+  overflow: hidden;
+
+}
+
+.cta-login-img-box{
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(235, 151, 78, 0.35),
+      rgba(230, 125, 34, 0.35)
+    ),
+    url("/resources/images/ushma/contact.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+
+.cta-form-login {
+  display: grid;
+  column-gap: 3.2rem;
+  row-gap: 2rem;
+  padding:3rem;
+}
+
+.cta-form-login label {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-bottom: 1.2rem;
+}
+
+.cta-form-login input,
+.cta-form-login select {
+  width: 100%;
+  padding: 1.2rem;
+  font-size: 1.8rem;
+  font-family: inherit;
+  color: inherit;
+  border: none;
+  background-color: #F2F2F2;
+  border-radius: 9px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.cta-form-login input::placeholder {
+  color: #aaa;
+}
+
+.cta-login *:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.8rem rgba(253, 242, 233, 0.5);
 }

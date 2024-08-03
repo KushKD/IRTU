@@ -10,10 +10,12 @@ uri="http://www.springframework.org/tags/form" %>
                 Sign in to your Account
             </h2>
         </div>
-        <div class="container grid grid--2-cols margin-bottom-md">
-            <div class="meal">
+        <div class="container grid margin-bottom-md">
+            <div class="meal cta-login">
+                <div class="cta-login-img-box" role="img" aria-label="Woman enjoying food"></div>
+
                 <div>
-                    <form class="cta-form" method="post" onsubmit="return submit_form()" action="${pageContext.request.contextPath}/login">
+                    <form class="cta-form-login" method="post" onsubmit="return submit_form()" action="${pageContext.request.contextPath}/login">
                         <div>
                             <input
                                 type="text"
@@ -65,10 +67,13 @@ uri="http://www.springframework.org/tags/form" %>
                     </form>
                 </div>
             </div>
-            <div class="diets meal">
+        </div>
+
+        <div>
+            <div class="diets">
                 <h3 class="heading-tertiary-login text-center">Not yet a Ushma Rewards member?</h3>
 
-                <div style="padding:3rem;">
+                <div style="padding: 3rem;">
                     <div class="grid-login grid--2-col grid-auto">
                         <div>
                             <ion-icon class="feature-icon-login" name="infinite-outline"></ion-icon>
