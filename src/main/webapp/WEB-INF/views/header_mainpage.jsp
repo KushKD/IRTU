@@ -45,7 +45,7 @@
             </a>
             <nav class="main-nav">
                <ul class="main-nav-list">
-                  <li><a class="main-nav-link" href="#">The Retreat</a></li>
+                  <li><a class="main-nav-link" href="${pageContext.request.contextPath}/">The Retreat</a></li>
                   <li>
                      <a class="main-nav-link" href="#">Registrations & Affiliation</a>
                   </li>
@@ -54,7 +54,7 @@
                   <li><a class="main-nav-link" href="#">About Us</a></li>
                   <li><a class="main-nav-link" href="#">Contact Us</a></li>
                   <li><a class="main-nav-link" href="#">Blog</a></li>
-                  <li><a class="main-nav-link nav-cta" href="#">Book Your Stay</a></li>
+                  <li><a class="main-nav-link nav-cta" href="${pageContext.request.contextPath}/login">Book Your Stay</a></li>
                </ul>
             </nav>
             <button class="btn-mobile-nav">

@@ -10,7 +10,7 @@
             <p class="hero-description">
                A Bluezone Valley Offering Holistic Wellness and Unmatched Comfort
             </p>
-            <a href="#" class="btn btn--full margin-right-sm">Book Your Stay</a>
+            <a href="${pageContext.request.contextPath}/login" class="btn btn--full margin-right-sm">Book Your Stay</a>
             <a href="#" class="btn btn--outline">Learn more &darr;</a>
             <div class="delivered-meals">
                <div class="delivered-imgs">

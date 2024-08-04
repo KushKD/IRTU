@@ -14,7 +14,7 @@
       <!-- PLUGINS STYLES-->
       <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/vendor/jquery-jvectormap-2.0.3.css" rel="stylesheet" />
       <!-- THEME STYLES-->
-      <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/vendor/main.min.css" rel="stylesheet" />
+      <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/vendor/main.css" rel="stylesheet" />
       <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/vendor/datatables.min.css" rel="stylesheet" />
       <!-- PAGE LEVEL STYLES-->
    </head>

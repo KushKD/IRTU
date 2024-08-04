@@ -43,6 +43,7 @@
 body .vegas-container {
   overflow: hidden !important;
   position: relative;
+  z-index: -10;
 }
 .vegas-video {
   min-width: 100%;
