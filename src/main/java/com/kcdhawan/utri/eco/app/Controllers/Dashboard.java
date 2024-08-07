@@ -58,19 +58,19 @@ public class Dashboard {
 
             UserEntity user = (UserEntity) request.getSession().getAttribute("UserData");
 
-            Double totalAumount = ordersRepository.getTotalPaymentsReceived();
-            Long totalCustomers = userDatatableRepository.getTotalCustomers();
-            Integer getCompletedOrders = ordersRepository.getCompletedOrders();
-            Long totalProducts = productsDatatableRepository.getTotalProducts();
+//            Double totalAumount = ordersRepository.getTotalPaymentsReceived();
+//            Long totalCustomers = userDatatableRepository.getTotalCustomers();
+//            Integer getCompletedOrders = ordersRepository.getCompletedOrders();
+//            Long totalProducts = productsDatatableRepository.getTotalProducts();
 
             if (user != null) {
 
                 if ( authority_.equalsIgnoreCase("OWNER")  ||authority_.equalsIgnoreCase("Super Admin")) {
-                    model.addAttribute("authority_", authority_);
-                    model.addAttribute("paymentsReceived", totalAumount);
-                    model.addAttribute("totalCustomers", totalCustomers);
-                    model.addAttribute("getCompletedOrders", getCompletedOrders);
-                    model.addAttribute("totalProducts",totalProducts);
+//                    model.addAttribute("authority_", authority_);
+//                    model.addAttribute("paymentsReceived", totalAumount);
+//                    model.addAttribute("totalCustomers", totalCustomers);
+//                    model.addAttribute("getCompletedOrders", getCompletedOrders);
+//                    model.addAttribute("totalProducts",totalProducts);
 
                     return "homepage_new";
 
