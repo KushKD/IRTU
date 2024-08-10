@@ -104,7 +104,7 @@
            <p><a href="${pageContext.request.contextPath}/createRole" style="text-decoration:none;color: #555;" >Role Management</a></p>
           </div>
           <div>
-            <p><a href="${pageContext.request.contextPath}/getRoles" style="text-decoration:none;color: #555;" >Company Management</a></p>
+            <p><a href="${pageContext.request.contextPath}/createFirm" style="text-decoration:none;color: #555;" >Firm Management</a></p>
           </div>
           <div>
             <p>Hotel Rooms</p>

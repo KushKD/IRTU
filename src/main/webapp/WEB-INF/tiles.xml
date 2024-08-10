@@ -139,6 +139,20 @@
 
     <!-- Roles End-->
 
+    <!-- Firm Management -->
+    <definition name="createFirm" extends="baselayoutdashboard">
+        <put-attribute name="content" value="/WEB-INF/jsp/firms/createfirm.jsp" />
+    </definition>
+
+    <definition name="getFirms" extends="baselayoutdashboard">
+        <put-attribute name="content" value="/WEB-INF/jsp/firms/viewfirms.jsp" />
+    </definition>
+
+    <definition name="updatefirm" extends="baselayoutdashboard">
+        <put-attribute name="content" value="/WEB-INF/jsp/firms/updatefirm.jsp" />
+    </definition>
+    <!-- Firm Management Ends -->
+
 
     <!-- Products -->
     <definition name="createProduct" extends="baselayoutdashboard">

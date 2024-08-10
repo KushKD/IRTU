@@ -13,9 +13,7 @@
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 <style>
-   .app-content {
-       background-color: #FFFFFF;
-   }
+
    /* Alternate row colors */
    #sampleTable tbody tr:nth-child(odd) {
        background-color: #f2f2f2;
@@ -152,16 +150,16 @@
 
 <main>
    <div class="projects">
-           <p class="section-title">View Hotel Roles</p>
+           <p class="section-title">View Firms</p>
            <br />
            <div class="project-card">
              <div>
          <table id="sampleTable" style="width:100%; padding:1rem;">
             <thead style="background-color:#cf711f;">
                <tr style="font-weight: bold; padding:1rem; justify-content: center;">
-                   <th style="color:#FFF; font-weight: bold; padding:1rem; justify-content: center;">Role Id</th>
-                   <th style="color:#FFF; font-weight: bold; padding:1rem; justify-content: center;">Role Name</th>
-                   <th style="color:#FFF; font-weight: bold; padding:1rem; justify-content: center;">Role Description</th>
+                   <th style="color:#FFF; font-weight: bold; padding:1rem; justify-content: center;">Firm Id</th>
+                   <th style="color:#FFF; font-weight: bold; padding:1rem; justify-content: center;">Firm Name</th>
+                   <th style="color:#FFF; font-weight: bold; padding:1rem; justify-content: center;">Firm Description</th>
                  <!--  <th style="color:#FFF; font-weight: bold; padding:1rem; justify-content: center;">Active/Inactive</th> -->
                    <th style="color:#FFF; font-weight: bold; padding:1rem; justify-content: center;">Action</th>
                </tr>
@@ -171,36 +169,41 @@
          </div>
          </div>
 
-       <div class="announcements">
-               <p class="section-title">Role Management</p>
-               <div>
-                    <div>
-                    <p><a href="${pageContext.request.contextPath}/createRole" style="text-decoration:none;color: #555;" >Create Role</a></p>
-                    </div>
-                    <div>
-                     <p><a href="${pageContext.request.contextPath}/getRoles" style="text-decoration:none;color: #555;" >View Role</a></p>
+        <div class="announcements">
+                <p class="section-title">Firm Management</p>
+                <div>
+                     <div>
+                     <p><a href="${pageContext.request.contextPath}/createFirm" style="text-decoration:none;color: #555;" >Create Firm</a></p>
                      </div>
+                     <div>
+                      <p><a href="${pageContext.request.contextPath}/getFirms" style="text-decoration:none;color: #555;" >View Firms</a></p>
+                      </div>
+                      <div>
+                    <p><a href="${pageContext.request.contextPath}/getFirmDocs" style="text-decoration:none;color: #555;" >Add Firm Documents</a></p>
+                    </div>
+                     <div>
+                                <p><a href="${pageContext.request.contextPath}/viewFirmDocs" style="text-decoration:none;color: #555;" >View Firm Documents</a></p>
+                                </div>
 
-
-               </div>
-             </div>
+                </div>
+              </div>
 </main>
 
 
 <script>
 	$('table#sampleTable').DataTable({
-		ajax: '/apidataTable/getRoles',
+		ajax: '/apidataTable/getFirms',
 		serverSide: true,
 		columns: [
 
 			{
-				data: 'roleId'
+				data: 'firmId'
 			},
 			{
-				data: 'roleName'
+				data: 'firmName'
 			},
 			{
-            				data: 'roleDescription'
+            				data: 'firmDescription'
             			},
 
 			//{
@@ -217,9 +220,9 @@
 
 
 			{
-				data: 'roleId',
+				data: 'firmId',
 				render: function (data) {
-					return '<a class="link" href="${pageContext.request.contextPath}/updateRole/${"' + data + '"}"  ;>Update</a>'
+					return '<a class="link" href="${pageContext.request.contextPath}/updateFirm/${"' + data + '"}"  ;>Update</a>'
 				}
 
 

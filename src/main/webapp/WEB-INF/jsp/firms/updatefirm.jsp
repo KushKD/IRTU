@@ -17,8 +17,8 @@
           <div>
 
 
-   <form:form method="POST" modelAttribute="rolesForm" action="${pageContext.request.contextPath}/updateRoleEntity"  class="cta-form-login">
-      <h2 class="form-signin-heading">Update Role</h2>
+   <form:form method="POST" modelAttribute="firmsForm" action="${pageContext.request.contextPath}/updateFirmEntity"  class="cta-form-login">
+      <h2 class="form-signin-heading">Update Firm</h2>
       <c:if test="${not empty successMessage}">
          <div id="serverError" class="successMessage">${successMessage}</div>
       </c:if>
@@ -26,23 +26,23 @@
       <c:if test="${not empty serverError}">
          <div id="serverError" class="plErroMessage">${serverError}</div>
       </c:if>
-      <spring:bind path="roleId">
+      <spring:bind path="firmId">
          <div class=" ${status.error ? 'has-error' : ''}">
-            <form:input type="text" path="roleId" readonly="true" value="${role_to_update.roleId}" autocomplete="off"  oncopy="return false" onpaste="return false"  class="form-control" autofocus="true"></form:input>
-            <form:errors path="roleId"></form:errors>
+            <form:input type="text" path="firmId" readonly="true" value="${firm_to_update.firmId}" autocomplete="off"  oncopy="return false" onpaste="return false"   autofocus="true"></form:input>
+            <form:errors path="firmId"></form:errors>
          </div>
       </spring:bind>
-      <spring:bind path="roleName">
+      <spring:bind path="firmName">
          <div class=" ${status.error ? 'has-error' : ''}">
-            <form:input type="text" path="roleName" class="form-control" value="${role_to_update.roleName}"  autocomplete="off"  oncopy="return false" onpaste="return false" placeholder="Role Name"></form:input>
-            <form:errors path="roleName"></form:errors>
+            <form:input type="text" path="firmName" class="form-control" value="${firm_to_update.firmName}"  autocomplete="off"  oncopy="return false" onpaste="return false" placeholder="Firm Name"></form:input>
+            <form:errors path="firmName"></form:errors>
          </div>
       </spring:bind>
 
-       <spring:bind path="roleDescription">
+       <spring:bind path="firmDescription">
                <div class=" ${status.error ? 'has-error' : ''}">
-                  <form:input type="text" path="roleDescription" class="form-control" value="${role_to_update.roleDescription}"  autocomplete="off"  oncopy="return false" onpaste="return false" placeholder="Role Description"></form:input>
-                  <form:errors path="roleDescription"></form:errors>
+                  <form:input type="text" path="firmDescription" class="form-control" value="${firm_to_update.firmDescription}"  autocomplete="off"  oncopy="return false" onpaste="return false" placeholder="Firm Description"></form:input>
+                  <form:errors path="firmDescription"></form:errors>
                </div>
             </spring:bind>
 
@@ -81,13 +81,13 @@
                         <div class="project-card-container">
                           <div class="project-card">
                             <div>
-                              <p>Update Hotel Role(s)</p>
+                              <p>Update Firm(s)</p>
                               <p>
-                               A clear and up-to-date description helps in training new employees and recruiting the right talent by accurately outlining what is expected from each role.
+                               A clear and up-to-date data of Firms helps in mapping the Properties with appropriate GST Numbers.
                               </p>
                             </div>
                             <div class="project-card-icons">
-                            <a href="${pageContext.request.contextPath}/getRoles" class="link"><span class="material-symbols-outlined">View More &rarr; </span></a>
+                            <a href="${pageContext.request.contextPath}/getFirms" class="link"><span class="material-symbols-outlined">View More &rarr; </span></a>
                             </div>
                           </div>
                         </div>
@@ -95,18 +95,21 @@
 </div>
 
 <div class="announcements">
-        <p class="section-title">Role Management</p>
+        <p class="section-title">Firm Management</p>
         <div>
              <div>
-             <p><a href="${pageContext.request.contextPath}/createRole" style="text-decoration:none;color: #555;" >Create Role</a></p>
+             <p><a href="${pageContext.request.contextPath}/createFirm" style="text-decoration:none;color: #555;" >Create Firm</a></p>
              </div>
              <div>
-              <p><a href="${pageContext.request.contextPath}/getRoles" style="text-decoration:none;color: #555;" >View Role</a></p>
+              <p><a href="${pageContext.request.contextPath}/getFirms" style="text-decoration:none;color: #555;" >View Firms</a></p>
               </div>
-
+              <div>
+            <p><a href="${pageContext.request.contextPath}/getFirmDocs" style="text-decoration:none;color: #555;" >Add Firm Documents</a></p>
+            </div>
+             <div>
+                        <p><a href="${pageContext.request.contextPath}/viewFirmDocs" style="text-decoration:none;color: #555;" >View Firm Documents</a></p>
+                        </div>
 
         </div>
       </div>
-
-
 </main>

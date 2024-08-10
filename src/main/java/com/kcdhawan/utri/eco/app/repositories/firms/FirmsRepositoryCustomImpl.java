@@ -2,6 +2,7 @@ package com.kcdhawan.utri.eco.app.repositories.firms;
 
 import com.kcdhawan.utri.eco.app.modules.firm.entity.FirmEntity;
 import com.kcdhawan.utri.eco.app.modules.order.OrdersEntity;
+import com.kcdhawan.utri.eco.app.modules.role.entity.RolesEntity;
 import org.springframework.stereotype.Service;
 
 import javax.persistence.EntityManager;
@@ -37,5 +38,17 @@ public class FirmsRepositoryCustomImpl implements FirmsRepositoryCustom{
         CriteriaQuery<FirmEntity> criteriaQuery = cb.createQuery(FirmEntity.class);
         TypedQuery<FirmEntity> query =  entityManager.createQuery(criteriaQuery);
         return query.getResultList();
+    }
+
+
+    @Override
+    public FirmEntity getFirmViaId(Integer roleId) throws Exception {
+        CriteriaBuilder cb = entityManager.getCriteriaBuilder();
+        CriteriaQuery<FirmEntity> cq = cb.createQuery(FirmEntity.class);
+        Root<FirmEntity> book = cq.from(FirmEntity.class);
+        Predicate role_id = cb.equal(book.get("firmId"), roleId);
+        cq.where(role_id);
+        TypedQuery<FirmEntity> query =  entityManager.createQuery(cq);
+        return query.getResultList().get(0);
     }
 }

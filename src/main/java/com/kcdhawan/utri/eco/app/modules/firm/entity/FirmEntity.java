@@ -17,17 +17,8 @@ public class FirmEntity implements Serializable {
     @Column(name="firm_name")
     private String firmName;
 
-    @Column(name="firm_gst")
-    private String firmGst;
-
-    @Column(name="firm_gst_doc")
-    private String firmgstDoc;
-
-    @Column(name="firm_pan")
-    private String firmPan;
-
-    @Column(name="firm_pan_doc")
-    private String firmpanDoc;
+    @Column(name="firm_description")
+    private String firmDescription;
 
 
     @Column(name="active")
@@ -60,37 +51,7 @@ public class FirmEntity implements Serializable {
         this.firmName = firmName;
     }
 
-    public String getFirmGst() {
-        return firmGst;
-    }
 
-    public void setFirmGst(String firmGst) {
-        this.firmGst = firmGst;
-    }
-
-    public String getFirmgstDoc() {
-        return firmgstDoc;
-    }
-
-    public void setFirmgstDoc(String firmgstDoc) {
-        this.firmgstDoc = firmgstDoc;
-    }
-
-    public String getFirmPan() {
-        return firmPan;
-    }
-
-    public void setFirmPan(String firmPan) {
-        this.firmPan = firmPan;
-    }
-
-    public String getFirmpanDoc() {
-        return firmpanDoc;
-    }
-
-    public void setFirmpanDoc(String firmpanDoc) {
-        this.firmpanDoc = firmpanDoc;
-    }
 
     public boolean isActive() {
         return active;
@@ -124,15 +85,20 @@ public class FirmEntity implements Serializable {
         this.updatedOn = updatedOn;
     }
 
+    public String getFirmDescription() {
+        return firmDescription;
+    }
+
+    public void setFirmDescription(String firmDescription) {
+        this.firmDescription = firmDescription;
+    }
+
     @Override
     public String toString() {
         return "FirmEntity{" +
                 "firmId=" + firmId +
                 ", firmName='" + firmName + '\'' +
-                ", firmGst='" + firmGst + '\'' +
-                ", firmgstDoc='" + firmgstDoc + '\'' +
-                ", firmPan='" + firmPan + '\'' +
-                ", firmpanDoc='" + firmpanDoc + '\'' +
+                ", firmDescription='" + firmDescription + '\'' +
                 ", active=" + active +
                 ", deleted=" + deleted +
                 ", createdDate=" + createdDate +
