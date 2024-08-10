@@ -32,10 +32,7 @@
       <!-- <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/vendor/datatables.min.css" rel="stylesheet" /> -->
       <!-- PAGE LEVEL STYLES-->
 
-    <link
-      href="https://cdn.jsdelivr.net/npm/fullcalendar@5.9.0/main.min.css"
-      rel="stylesheet"
-    />
+
   </head>
 
   <style>
