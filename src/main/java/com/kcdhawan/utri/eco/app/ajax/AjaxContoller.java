@@ -2,12 +2,14 @@ package com.kcdhawan.utri.eco.app.ajax;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.kcdhawan.utri.eco.app.modules.hoteltype.HtypeEntity;
 import com.kcdhawan.utri.eco.app.modules.products.entity.ProductsThumbnail;
 import com.kcdhawan.utri.eco.app.modules.role.modal.RolesModal;
 import com.kcdhawan.utri.eco.app.modules.states.StatesMaster;
 import com.kcdhawan.utri.eco.app.repositories.ProductThumbnails.ProductThumbnailsDatatableRepository;
 import com.kcdhawan.utri.eco.app.repositories.cart_items.CartItemRepository;
 import com.kcdhawan.utri.eco.app.repositories.customer_address.CustomerAddressRepository;
+import com.kcdhawan.utri.eco.app.repositories.htype.HtypeRepository;
 import com.kcdhawan.utri.eco.app.repositories.roles.RolesRepository;
 import com.kcdhawan.utri.eco.app.repositories.state.StateRepository;
 import com.kcdhawan.utri.eco.app.repositories.user.UserRepository;
@@ -38,6 +40,9 @@ public class AjaxContoller {
 
     @Autowired
     StateRepository stateRepository;
+
+    @Autowired
+    HtypeRepository htypeRepository;
 
     @Autowired
     ProductThumbnailsDatatableRepository productThumbnailsDatatableRepository;
@@ -93,6 +98,27 @@ public class AjaxContoller {
 
     }
 
+
+    //getHotelTypes
+    @RequestMapping(value = "/ajax/getHotelTypes", method = RequestMethod.GET,  produces="application/json")
+    public @ResponseBody
+    String getHotelTypes() throws JsonProcessingException {
+        Map<String, Object> map = null;
+        List<HtypeEntity> hotelTypes = htypeRepository.getHotelType();
+
+
+        map = new HashMap<String, Object>();
+        map.put(Constants.keyResponse, hotelTypes);
+        map.put(Constants.keyMessage, Constants.valueMessage);
+        map.put(Constants.keyStatus, HttpStatus.OK);
+
+        ObjectMapper Obj = new ObjectMapper();
+        String jsonStr = null;
+        jsonStr = Obj.writeValueAsString(map);
+        logger.info(jsonStr);
+        return jsonStr;
+
+    }
 
     @DeleteMapping("/ajax/deleteThumbnail/{id}")
     public ResponseEntity<?> deleteThumbnail(@PathVariable Integer id) throws JsonProcessingException {

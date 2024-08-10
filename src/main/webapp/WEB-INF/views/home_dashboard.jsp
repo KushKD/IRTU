@@ -9,6 +9,8 @@
       rel="stylesheet"
     />
 
+
+
  <main>
       <div class="projects">
         <p class="section-title">Bookings Calender</p>
@@ -107,7 +109,7 @@
             <p><a href="${pageContext.request.contextPath}/createFirm" style="text-decoration:none;color: #555;" >Firm Management</a></p>
           </div>
           <div>
-            <p>Hotel Rooms</p>
+          <p><a href="${pageContext.request.contextPath}/createHotel" style="text-decoration:none;color: #555;" >Hotel Management</a></p>
           </div>
           <div>
             <p>Transport Facility</p>
@@ -138,7 +140,7 @@
           <div>
             <img
               class="profile-picture"
-              src="images/pics/profile-pic2.png"
+               src="${pageContext.request.contextPath}/resources/images/ushma/dash-pics/profile-pic2.png"
               alt="profile picture 1"
             />
             <div>
@@ -149,7 +151,7 @@
           <div>
             <img
               class="profile-picture"
-              src="images/dashboards/food.jpg"
+               src="${pageContext.request.contextPath}/resources/images/ushma/dash-pics/profile-pic3.png"
               alt="profile picture 2"
             />
             <div>
@@ -160,7 +162,7 @@
           <div>
             <img
               class="profile-picture"
-              src="images/pics/profile-pic4.png"
+               src="${pageContext.request.contextPath}/resources/images/ushma/dash-pics/profile-pic4.png"
               alt="profile picture 3"
             />
             <div>
@@ -171,7 +173,7 @@
           <div>
             <img
               class="profile-picture"
-              src="images/pics/profile-pic5.png"
+              src="${pageContext.request.contextPath}/resources/images/ushma/dash-pics/profile-pic5.png"
               alt="profile picture 4"
             />
             <div>

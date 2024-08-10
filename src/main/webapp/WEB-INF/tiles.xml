@@ -153,6 +153,20 @@
     </definition>
     <!-- Firm Management Ends -->
 
+    <!-- Hotel Management -->
+    <definition name="createhotel" extends="baselayoutdashboard">
+        <put-attribute name="content" value="/WEB-INF/jsp/hotel/createhotel.jsp" />
+    </definition>
+    <definition name="getHotels" extends="baselayoutdashboard">
+        <put-attribute name="content" value="/WEB-INF/jsp/hotel/viewhotels.jsp" />
+    </definition>
+    <definition name="updateHotel" extends="baselayoutdashboard">
+        <put-attribute name="content" value="/WEB-INF/jsp/hotel/updatehotel.jsp" />
+    </definition>
+
+    <!-- Hotel Management Ends -->
+
+
 
     <!-- Products -->
     <definition name="createProduct" extends="baselayoutdashboard">

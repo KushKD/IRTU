@@ -79,6 +79,43 @@ function getroles() {
     });
 }
 
+//Get Hotel Type
+function getHotelTypes() {
+
+    $.ajax({
+        type: "GET",
+        url: formURL + "/ajax/getHotelTypes",
+        success: function (data) {
+            //Tomcat
+            var json_ = JSON.parse(JSON.stringify(data));
+            //Jboss
+            //var json_ = JSON.parse(data);
+
+            console.log(json_);
+            var selectRole = $('#hotelType'); // the state select element
+            selectRole.find('option')
+                .remove();
+            selectRole.append("<option value=" + 0 + " >" + "---Please Select---" + "</option>")
+
+
+             for (i = 0; i < json_.RESPONSE.length; i++) {
+             if (document.getElementById('hotel_type_hidden') != null && document.getElementById('hotel_type_hidden').value == json_.RESPONSE[i].htypeId) {
+                selectRole.append("<option selected value=" + json_.RESPONSE[i].htypeId + " >" + json_.RESPONSE[i].htypeName + "</option>")
+            } else {
+                selectRole.append("<option value=" + json_.RESPONSE[i].htypeId + " >" + json_.RESPONSE[i].htypeName + "</option>")
+            }
+            }
+
+
+        },
+        error: function (data) {
+            console.log(data)
+        }
+
+    });
+}
+
+
 //getGenders
 function getGenders() {
 
@@ -129,7 +166,7 @@ function getGendersUpdate() {
 
 
             for (i = 0; i < json_.RESPONSE.length; i++) {
-                if (document.getElementById('gid') != null && document.getElementById('gid')
+                if (document.getElementById('gid') != null && document.getElementById('gid') //hotel_type_hidden
                     .value == json_.RESPONSE[i].genderId) {
                     selectRole.append("<option selected value=" + json_.RESPONSE[i].genderId + " >" + json_.RESPONSE[i].genderName + "</option>")
                 } else {
