@@ -101,10 +101,10 @@
         <p class="section-title">Hotel Management</p>
         <div>
           <div>
-            <p>Hotels</p>
+           <p><a href="${pageContext.request.contextPath}/createRole" style="text-decoration:none;color: #555;" >Role Management</a></p>
           </div>
           <div>
-            <p>Hotel Staff</p>
+            <p><a href="${pageContext.request.contextPath}/getRoles" style="text-decoration:none;color: #555;" >Company Management</a></p>
           </div>
           <div>
             <p>Hotel Rooms</p>

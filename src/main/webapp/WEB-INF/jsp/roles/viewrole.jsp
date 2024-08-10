@@ -82,6 +82,12 @@
        text-decoration: none; /* Remove underline */
    }
 
+   /* Pagination numbers styling */
+      .dataTables_wrapper .dataTables_paginate .paginate_button a {
+          color: #FFF; /* White color for numbers */
+          text-decoration: none; /* Remove underline */
+      }
+
    /* Pagination arrow styling */
    .dataTables_wrapper .dataTables_paginate .paginate_button.previous,
    .dataTables_wrapper .dataTables_paginate .paginate_button.next {
@@ -156,7 +162,7 @@
                    <th style="color:#FFF; font-weight: bold; padding:1rem; justify-content: center;">Role Id</th>
                    <th style="color:#FFF; font-weight: bold; padding:1rem; justify-content: center;">Role Name</th>
                    <th style="color:#FFF; font-weight: bold; padding:1rem; justify-content: center;">Role Description</th>
-                   <th style="color:#FFF; font-weight: bold; padding:1rem; justify-content: center;">Active/Inactive</th>
+                 <!--  <th style="color:#FFF; font-weight: bold; padding:1rem; justify-content: center;">Active/Inactive</th> -->
                    <th style="color:#FFF; font-weight: bold; padding:1rem; justify-content: center;">Action</th>
                </tr>
             </thead>
@@ -219,23 +225,23 @@
             				data: 'roleDescription'
             			},
 
-			{
-				data: 'active',
-				render: function (data) {
-					console.log(data);
-					if (data == true) {
-						return '<div>' + data + '</div>'
-					} else {
-						return '<div>' + data + '</div>'
-					}
-				}
-			},
+			//{
+			//	data: 'active',
+			//	render: function (data) {
+			//		console.log(data);
+			//		if (data == true) {
+			//			return '<div>' + data + '</div>'
+			//		} else {
+			//			return '<div>' + data + '</div>'
+			//		}
+			//	}
+			//},
 
 
 			{
 				data: 'roleId',
 				render: function (data) {
-					return '<div ><a href="${pageContext.request.contextPath}/updateRole/${"' + data + '"}"  ;>Update</a></div>'
+					return '<a class="link" href="${pageContext.request.contextPath}/updateRole/${"' + data + '"}"  ;>Update</a>'
 				}
 
 

@@ -54,7 +54,7 @@
   <body class="grid-dash grid--6-cols">
     <aside class="sidebar">
       <div>
-        <a class="sidebar-link" href="#">
+        <a class="sidebar-link" href="${pageContext.request.contextPath}/dashboard">
           <span class="material-symbols-rounded"> dashboard </span>
           <p>Dashboard</p>
         </a>
@@ -62,7 +62,7 @@
       <div class="menu">
         <ul>
           <a href="#">
-            <li class="sidebar-link selected">
+            <li class="sidebar-link">
               <span class="material-symbols-rounded"> home </span>
               <p>Hotels</p>
             </li>

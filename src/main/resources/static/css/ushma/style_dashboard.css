@@ -795,3 +795,14 @@ main {
     grid-column: 1 / -1;
   }
 }
+
+
+.dashboard_link{
+   color:#555;
+    padding: 1.6rem 0.6rem 0 0.6rem;
+    font-size: 1.5rem;
+    text-decoration:none;
+    font-weight: 700;
+}
+
+
