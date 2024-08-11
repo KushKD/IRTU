@@ -23,4 +23,5 @@ public interface RoomRepositoryCustom {
 
 
     RoomEntity getRoomViaId(Integer roleId) throws Exception;
+    List<RoomEntity> getRoomViaHotelId(Integer hotelId) throws Exception;
 }

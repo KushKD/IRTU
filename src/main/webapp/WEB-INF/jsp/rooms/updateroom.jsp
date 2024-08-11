@@ -148,19 +148,17 @@
             <p><a href="${pageContext.request.contextPath}/getRooms" style="text-decoration:none;color: #555;" >View Rooms</a></p>
             </div>
              <div>
-            <p><a href="${pageContext.request.contextPath}/createStaff" style="text-decoration:none;color: #555;" >View Room Amenities</a></p>
+            <p><a href="${pageContext.request.contextPath}/createRoomAmenities" style="text-decoration:none;color: #555;" >Add Room Amenities</a></p>
             </div>
              <div>
-            <p><a href="${pageContext.request.contextPath}/createStaff" style="text-decoration:none;color: #555;" > Add Room Images</a></p>
+            <p><a href="${pageContext.request.contextPath}/getRoomAmenities" style="text-decoration:none;color: #555;" > View Room Amenities</a></p>
             </div>
              <div>
-            <p><a href="${pageContext.request.contextPath}/createStaff" style="text-decoration:none;color: #555;" > View Room Types</a></p>
+            <p><a href="${pageContext.request.contextPath}/getRoomTypes" style="text-decoration:none;color: #555;" > View Room Types</a></p>
             </div>
 
         </div>
       </div>
-
-
 </main>
 
 

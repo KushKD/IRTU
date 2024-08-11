@@ -147,19 +147,17 @@
 
 <main>
    <div class="projects">
-           <p class="section-title">View Room(s)</p>
+           <p class="section-title">View Room Types</p>
            <br />
            <div class="project-card">
              <div>
          <table id="sampleTable" style="width:100%; padding:1rem;">
             <thead style="background-color:#cf711f;">
                <tr style="font-weight: bold; padding:1rem; justify-content: center;">
-                   <th style="color:#FFF; font-weight: bold; padding:1rem; justify-content: center;">Hotel</th>
-                   <th style="color:#FFF; font-weight: bold; padding:1rem; justify-content: center;">Floor</th>
-                   <th style="color:#FFF; font-weight: bold; padding:1rem; justify-content: center;">Room Type</th>
-                   <th style="color:#FFF; font-weight: bold; padding:1rem; justify-content: center;">Room Number</th>
-                   <th style="color:#FFF; font-weight: bold; padding:1rem; justify-content: center;">Room Status</th>
-                   <th style="color:#FFF; font-weight: bold; padding:1rem; justify-content: center;">Action</th>
+               <th style="color:#FFF; font-weight: bold; padding:1rem; justify-content: center;">Hotel Name</th>
+                 <th style="color:#FFF; font-weight: bold; padding:1rem; justify-content: center;">Floor</th>
+                 <th style="color:#FFF; font-weight: bold; padding:1rem; justify-content: center;">Room Type Description</th>
+
                </tr>
             </thead>
          </table>
@@ -195,36 +193,21 @@
 
 <script>
 	$('table#sampleTable').DataTable({
-		ajax: '/apidataTable/getRooms',
+		ajax: '/apidataTable/getRoomTypes',
 		serverSide: true,
 		columns: [
 
-			{
-				data: 'hotelEntity.hotelName'
-			},
-			{
-				data: 'floorTypeEntity.floorName'
-			},
-			{
-            				data: 'rtypeEntity.rtypeName'
-            			},
 {
-            				data: 'roomNo'
-            			},
-
-            			{
-                                    				data: 'rstatusEntity.rstatusName'
-                                    			},
-
+data: 'floorId.hotelId.hotelName'
+},
 
 			{
-				data: 'roomId',
-				render: function (data) {
-					return '<a class="link" href="${pageContext.request.contextPath}/updateRoom/${"' + data + '"}"  ;>Update</a>'
-				}
+			    data: 'floorId.floorName'
+			},
+			{
+            				data: 'rtypeName'
+            			}
 
-
-			}
 		],
 		pagingType: "simple_numbers", // Optional: For simpler pagination controls
          drawCallback: function() {

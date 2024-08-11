@@ -6,6 +6,7 @@ import com.kcdhawan.utri.eco.app.modules.hotel.entity.HotelEntity;
 import com.kcdhawan.utri.eco.app.modules.hoteltype.HtypeEntity;
 import com.kcdhawan.utri.eco.app.modules.role.modal.RolesModal;
 import com.kcdhawan.utri.eco.app.modules.room.entity.FloorTypeEntity;
+import com.kcdhawan.utri.eco.app.modules.room.entity.RoomEntity;
 import com.kcdhawan.utri.eco.app.modules.room.entity.RoomTypeEntity;
 import com.kcdhawan.utri.eco.app.modules.states.StatesMaster;
 import com.kcdhawan.utri.eco.app.repositories.ProductThumbnails.ProductThumbnailsDatatableRepository;
@@ -14,6 +15,7 @@ import com.kcdhawan.utri.eco.app.repositories.floor.FloorRepository;
 import com.kcdhawan.utri.eco.app.repositories.hotel.HotelRepository;
 import com.kcdhawan.utri.eco.app.repositories.htype.HtypeRepository;
 import com.kcdhawan.utri.eco.app.repositories.roles.RolesRepository;
+import com.kcdhawan.utri.eco.app.repositories.room.RoomRepository;
 import com.kcdhawan.utri.eco.app.repositories.roomtype.RoomTRepository;
 import com.kcdhawan.utri.eco.app.repositories.state.StateRepository;
 import com.kcdhawan.utri.eco.app.repositories.user.UserRepository;
@@ -55,6 +57,9 @@ public class AjaxContoller {
 
     @Autowired
     RoomTRepository roomTRepository;
+
+    @Autowired
+    RoomRepository roomRepository;
 
     @Autowired
     ProductThumbnailsDatatableRepository productThumbnailsDatatableRepository;
@@ -158,6 +163,19 @@ public class AjaxContoller {
         List<FloorTypeEntity> floors = floorRepository.getFloorViaHotels(Integer.parseInt(id));
         map = new HashMap<String, Object>();
         map.put(Constants.keyResponse, floors);
+        map.put(Constants.keyMessage, Constants.valueMessage);
+        map.put(Constants.keyStatus, HttpStatus.OK);
+        return new ResponseEntity<Map<String, Object>>(map, HttpStatus.OK);
+    }
+
+    //getRoomsViaHotel
+    @RequestMapping(value = "/ajax/getRoomsViaHotel", method = RequestMethod.GET,  produces="application/json")
+    public @ResponseBody
+    ResponseEntity<?> getRoomsViaHotel(@RequestParam(value =  "id", required = true) String id) throws Exception {
+        Map<String, Object> map = null;
+        List<RoomEntity> rooms = roomRepository.getRoomViaHotelId(Integer.parseInt(id));
+        map = new HashMap<String, Object>();
+        map.put(Constants.keyResponse, rooms);
         map.put(Constants.keyMessage, Constants.valueMessage);
         map.put(Constants.keyStatus, HttpStatus.OK);
         return new ResponseEntity<Map<String, Object>>(map, HttpStatus.OK);

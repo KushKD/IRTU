@@ -174,6 +174,40 @@ function getFloors(id) {
 
 }
 
+//getRoomsViaHotel
+function getRoomsViaHotel(id) {
+    $.ajax({
+        type: "GET",
+        url: formURL + "/ajax/getRoomsViaHotel",
+        data: {
+            "id": id
+        },
+        success: function (data) {
+            //Tomcat
+            var json_ = JSON.parse(JSON.stringify(data));
+            var selectRole = $('#roomTypeId');
+            selectRole.find('option')
+                .remove();
+            selectRole.append("<option value=" + 0 + " >" + "---Select ---" + "</option>")
+
+             for (i = 0; i < json_.RESPONSE.length; i++) {
+                         if (document.getElementById('room_id_hidden') != null && document.getElementById('room_id_hidden').value == json_.RESPONSE[i].roomId) {
+                            selectRole.append("<option selected value=" + json_.RESPONSE[i].roomId + " >" + json_.RESPONSE[i].roomNo + "</option>")
+                        } else {
+                            selectRole.append("<option value=" + json_.RESPONSE[i].roomId + " >" + json_.RESPONSE[i].roomNo + "</option>")
+                        }
+                        }
+
+        },
+        error: function (data) {
+            console.log(data)
+        }
+
+    });
+
+
+}
+
 //getRoomTypes
 function getRoomTypes(id) {
     $.ajax({

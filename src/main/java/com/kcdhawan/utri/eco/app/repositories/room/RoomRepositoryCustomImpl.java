@@ -43,4 +43,15 @@ public class RoomRepositoryCustomImpl implements RoomRepositoryCustom {
         TypedQuery<RoomEntity> query =  entityManager.createQuery(cq);
         return query.getResultList().get(0);
     }
+
+    @Override
+    public List<RoomEntity> getRoomViaHotelId(Integer hotelId) throws Exception {
+        CriteriaBuilder cb = entityManager.getCriteriaBuilder();
+        CriteriaQuery<RoomEntity> cq = cb.createQuery(RoomEntity.class);
+        Root<RoomEntity> book = cq.from(RoomEntity.class);
+        Predicate hotelId_ = cb.equal(book.get("hotelEntity").get("hotelId"), hotelId);
+        cq.where(hotelId_);
+        TypedQuery<RoomEntity> query =  entityManager.createQuery(cq);
+        return query.getResultList();
+    }
 }

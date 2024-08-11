@@ -1,6 +1,8 @@
 package com.kcdhawan.utri.eco.app.modules.room.entity;
 
 
+import com.kcdhawan.utri.eco.app.modules.hotel.entity.HotelEntity;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
@@ -18,8 +20,9 @@ public class FloorTypeEntity implements Serializable {
     @Column(name = "floor_name", length = 100)
     private String floorName;
 
-    @Column(name = "hotel_id")
-    private Integer hotelId;
+    @OneToOne
+    @JoinColumn(name = "hotel_id")
+    private HotelEntity hotelId;
 
     @Column(name = "active", nullable = false)
     private boolean active = true;
@@ -53,11 +56,11 @@ public class FloorTypeEntity implements Serializable {
         this.floorName = floorName;
     }
 
-    public Integer getHotelId() {
+    public HotelEntity getHotelId() {
         return hotelId;
     }
 
-    public void setHotelId(Integer hotelId) {
+    public void setHotelId(HotelEntity hotelId) {
         this.hotelId = hotelId;
     }
 

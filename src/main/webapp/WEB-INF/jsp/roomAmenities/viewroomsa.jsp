@@ -147,7 +147,7 @@
 
 <main>
    <div class="projects">
-           <p class="section-title">View Room(s)</p>
+           <p class="section-title">View Room Amenities</p>
            <br />
            <div class="project-card">
              <div>
@@ -155,10 +155,9 @@
             <thead style="background-color:#cf711f;">
                <tr style="font-weight: bold; padding:1rem; justify-content: center;">
                    <th style="color:#FFF; font-weight: bold; padding:1rem; justify-content: center;">Hotel</th>
-                   <th style="color:#FFF; font-weight: bold; padding:1rem; justify-content: center;">Floor</th>
-                   <th style="color:#FFF; font-weight: bold; padding:1rem; justify-content: center;">Room Type</th>
                    <th style="color:#FFF; font-weight: bold; padding:1rem; justify-content: center;">Room Number</th>
-                   <th style="color:#FFF; font-weight: bold; padding:1rem; justify-content: center;">Room Status</th>
+                   <th style="color:#FFF; font-weight: bold; padding:1rem; justify-content: center;">Amenity Name</th>
+                   <th style="color:#FFF; font-weight: bold; padding:1rem; justify-content: center;">Amenity Description</th>
                    <th style="color:#FFF; font-weight: bold; padding:1rem; justify-content: center;">Action</th>
                </tr>
             </thead>
@@ -195,32 +194,30 @@
 
 <script>
 	$('table#sampleTable').DataTable({
-		ajax: '/apidataTable/getRooms',
+		ajax: '/apidataTable/getRoomsA',
 		serverSide: true,
 		columns: [
 
 			{
-				data: 'hotelEntity.hotelName'
+				data: 'hotel.hotelName'
 			},
 			{
-				data: 'floorTypeEntity.floorName'
+				data: 'room.roomNo'
 			},
 			{
-            				data: 'rtypeEntity.rtypeName'
+            				data: 'amenityName'
             			},
 {
-            				data: 'roomNo'
+            				data: 'amenityDescription'
             			},
 
-            			{
-                                    				data: 'rstatusEntity.rstatusName'
-                                    			},
+
 
 
 			{
-				data: 'roomId',
+				data: 'roomAmenityId',
 				render: function (data) {
-					return '<a class="link" href="${pageContext.request.contextPath}/updateRoom/${"' + data + '"}"  ;>Update</a>'
+					return '<a class="link" href="${pageContext.request.contextPath}/updateRoomA/${"' + data + '"}"  ;>Update</a>'
 				}
 
 

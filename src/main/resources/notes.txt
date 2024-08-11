@@ -137,6 +137,21 @@ FOREIGN KEY (hotel_id) REFERENCES mst_hotels(hotel_id)
 );
 
 
+-- room_amenities
+CREATE TABLE room_amenities (
+    room_amenity_id SERIAL PRIMARY KEY,
+    room_id INTEGER NOT NULL,
+	hotel_id INTEGER NOT NULL,
+    amenity_name character varying(100) NOT NULL,
+    amenity_description character varying(255),
+    is_available boolean DEFAULT true NOT NULL,
+    active boolean DEFAULT true NOT NULL,
+    created_date timestamp without time zone DEFAULT now(),
+    updated_date timestamp without time zone,
+    FOREIGN KEY (room_id) REFERENCES mst_room(room_id),
+	FOREIGN KEY (hotel_id) REFERENCES mst_hotels(hotel_id)
+);
+
 
 CREATE TABLE mst_products(
 product_id SERIAL PRIMARY KEY NOT NULL,

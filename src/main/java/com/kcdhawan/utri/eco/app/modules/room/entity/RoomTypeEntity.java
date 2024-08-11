@@ -17,8 +17,9 @@ public class RoomTypeEntity implements Serializable {
     @Column(name = "rtype_name", length = 100)
     private String rtypeName;
 
-    @Column(name = "floor_id")
-    private Integer floorId;
+    @JoinColumn (name = "floor_id")
+    @OneToOne
+    private FloorTypeEntity floorId;
 
     @Column(name = "active", nullable = false)
     private boolean active = true;
@@ -52,11 +53,11 @@ public class RoomTypeEntity implements Serializable {
         this.rtypeName = rtypeName;
     }
 
-    public Integer getFloorId() {
+    public FloorTypeEntity getFloorId() {
         return floorId;
     }
 
-    public void setFloorId(Integer floorId) {
+    public void setFloorId(FloorTypeEntity floorId) {
         this.floorId = floorId;
     }
 
