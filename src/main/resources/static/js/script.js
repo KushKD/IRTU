@@ -59,10 +59,6 @@ function getroles() {
         success: function (data) {
             //Tomcat
             var json_ = JSON.parse(JSON.stringify(data));
-            //Jboss
-            //var json_ = JSON.parse(data);
-
-            console.log(json_);
             var selectRole = $('#roles'); // the state select element
             selectRole.find('option')
                 .remove();
@@ -88,10 +84,6 @@ function getHotelTypes() {
         success: function (data) {
             //Tomcat
             var json_ = JSON.parse(JSON.stringify(data));
-            //Jboss
-            //var json_ = JSON.parse(data);
-
-            console.log(json_);
             var selectRole = $('#hotelType'); // the state select element
             selectRole.find('option')
                 .remove();
@@ -124,10 +116,6 @@ function getHotels() {
         success: function (data) {
             //Tomcat
             var json_ = JSON.parse(JSON.stringify(data));
-            //Jboss
-            //var json_ = JSON.parse(data);
-
-            console.log(json_);
             var selectRole = $('#hotelId'); // the state select element
             selectRole.find('option')
                 .remove();
@@ -163,7 +151,6 @@ function getFloors(id) {
         success: function (data) {
             //Tomcat
             var json_ = JSON.parse(JSON.stringify(data));
-
             var selectRole = $('#floorId');
             selectRole.find('option')
                 .remove();
@@ -231,10 +218,6 @@ function getGenders() {
         success: function (data) {
             //Tomcat
             var json_ = JSON.parse(JSON.stringify(data));
-            //Jboss
-            //var json_ = JSON.parse(data);
-
-            console.log(json_);
             var selectRole = $('#gender'); // the state select element
             selectRole.find('option')
                 .remove();
@@ -259,10 +242,6 @@ function getGendersUpdate() {
         success: function (data) {
             //Tomcat
             var json_ = JSON.parse(JSON.stringify(data));
-            //Jboss
-            //var json_ = JSON.parse(data);
-
-            console.log(json_);
             var selectRole = $('#gender'); // the state select element
             selectRole.find('option')
                 .remove();
