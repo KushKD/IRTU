@@ -3,8 +3,6 @@ package com.kcdhawan.utri.eco.app.modules.hotel.controller;
 import com.kcdhawan.utri.eco.app.modules.hotel.entity.HotelEntity;
 import com.kcdhawan.utri.eco.app.modules.hotel.form.HotelForm;
 import com.kcdhawan.utri.eco.app.modules.hoteltype.HtypeEntity;
-import com.kcdhawan.utri.eco.app.modules.role.entity.RolesEntity;
-import com.kcdhawan.utri.eco.app.modules.role.form.RolesForm;
 import com.kcdhawan.utri.eco.app.modules.user.entity.UserEntity;
 import com.kcdhawan.utri.eco.app.repositories.hotel.HotelRepository;
 import org.springframework.beans.factory.annotation.Autowired;

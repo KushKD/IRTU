@@ -43,7 +43,7 @@
         </div>
         <div class="menu">
             <ul>
-                <a href="#">
+                <a href="${pageContext.request.contextPath}/getHotels">
                     <li class="sidebar-link">
                         <span class="material-symbols-rounded"> home </span>
                         <p>Hotels</p>
@@ -58,19 +58,14 @@
                 <a href="#">
                     <li class="sidebar-link">
                         <span class="material-symbols-rounded"> message </span>
-                        <p>Users and Roles</p>
+                        <p>Customers</p>
                     </li>
                 </a>
-                <a href="#">
-                    <li class="sidebar-link">
-                        <span class="material-symbols-rounded"> history </span>
-                        <p>News & Events</p>
-                    </li>
-                </a>
+
                 <a href="#">
                     <li class="sidebar-link">
                         <span class="material-symbols-rounded"> task </span>
-                        <p>Blogs</p>
+                        <p>Store</p>
                     </li>
                 </a>
                 <a href="#">
@@ -89,7 +84,7 @@
                 <a href="#">
                     <li class="sidebar-link">
                         <span class="material-symbols-rounded"> support </span>
-                        <p>Support</p>
+                        <p>Queries</p>
                     </li>
                 </a>
                 <a href="#">

@@ -116,6 +116,112 @@ function getHotelTypes() {
 }
 
 
+function getHotels() {
+
+    $.ajax({
+        type: "GET",
+        url: formURL + "/ajax/getHotels",
+        success: function (data) {
+            //Tomcat
+            var json_ = JSON.parse(JSON.stringify(data));
+            //Jboss
+            //var json_ = JSON.parse(data);
+
+            console.log(json_);
+            var selectRole = $('#hotelId'); // the state select element
+            selectRole.find('option')
+                .remove();
+            selectRole.append("<option value=" + 0 + " >" + "---Please Select---" + "</option>")
+
+
+             for (i = 0; i < json_.RESPONSE.length; i++) {
+             if (document.getElementById('hotel_id_hidden') != null && document.getElementById('hotel_id_hidden').value == json_.RESPONSE[i].hotelId) {
+                selectRole.append("<option selected value=" + json_.RESPONSE[i].hotelId + " >" + json_.RESPONSE[i].hotelName + "</option>")
+            } else {
+                selectRole.append("<option value=" + json_.RESPONSE[i].hotelId + " >" + json_.RESPONSE[i].hotelName + "</option>")
+            }
+            }
+
+
+        },
+        error: function (data) {
+            console.log(data)
+        }
+
+    });
+}
+
+
+//getFloors
+function getFloors(id) {
+    $.ajax({
+        type: "GET",
+        url: formURL + "/ajax/getFloors",
+        data: {
+            "id": id
+        },
+        success: function (data) {
+            //Tomcat
+            var json_ = JSON.parse(JSON.stringify(data));
+
+            var selectRole = $('#floorId');
+            selectRole.find('option')
+                .remove();
+            selectRole.append("<option value=" + 0 + " >" + "---Select ---" + "</option>")
+
+             for (i = 0; i < json_.RESPONSE.length; i++) {
+                         if (document.getElementById('floor_id_hidden') != null && document.getElementById('floor_id_hidden').value == json_.RESPONSE[i].floorId) {
+                            selectRole.append("<option selected value=" + json_.RESPONSE[i].floorId + " >" + json_.RESPONSE[i].floorName + "</option>")
+                        } else {
+                            selectRole.append("<option value=" + json_.RESPONSE[i].floorId + " >" + json_.RESPONSE[i].floorName + "</option>")
+                        }
+                        }
+
+        },
+        error: function (data) {
+            console.log(data)
+        }
+
+    });
+
+
+}
+
+//getRoomTypes
+function getRoomTypes(id) {
+    $.ajax({
+        type: "GET",
+        url: formURL + "/ajax/getRoomTypes",
+        data: {
+            "id": id
+        },
+        success: function (data) {
+            //Tomcat
+            var json_ = JSON.parse(JSON.stringify(data));
+
+            var selectRole = $('#roomTypeId');
+            selectRole.find('option')
+                .remove();
+            selectRole.append("<option value=" + 0 + " >" + "---Select ---" + "</option>")
+
+             for (i = 0; i < json_.RESPONSE.length; i++) {
+                         if (document.getElementById('roomtype_id_hidden') != null && document.getElementById('roomtype_id_hidden').value == json_.RESPONSE[i].rtypeId) {
+                            selectRole.append("<option selected value=" + json_.RESPONSE[i].rtypeId + " >" + json_.RESPONSE[i].rtypeName + "</option>")
+                        } else {
+                            selectRole.append("<option value=" + json_.RESPONSE[i].rtypeId + " >" + json_.RESPONSE[i].rtypeName + "</option>")
+                        }
+                        }
+
+        },
+        error: function (data) {
+            console.log(data)
+        }
+
+    });
+
+
+}
+
 //getGenders
 function getGenders() {
 

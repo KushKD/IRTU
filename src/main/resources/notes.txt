@@ -80,6 +80,63 @@ updated_date timestamp without time zone,
 FOREIGN KEY (htype_id) REFERENCES mst_hoteltype(htype_id),
 );
 
+--Floor
+CREATE TABLE mst_floor(
+floor_id SERIAL PRIMARY KEY NOT NULL,
+floor_name  character varying (100),
+hotel_id Integer,
+active boolean DEFAULT true NOT NULL,
+is_deleted boolean DEFAULT false NOT NULL,
+createddate timestamp without time zone DEFAULT ('now'::text)::date,
+updated_date timestamp without time zone,
+FOREIGN KEY (hotel_id) REFERENCES mst_hotels(hotel_id)
+);
+
+--RoomType
+CREATE TABLE mst_rtype(
+rtype_id SERIAL PRIMARY KEY NOT NULL,
+rtype_name  character varying (100),
+floor_id Integer,
+active boolean DEFAULT true NOT NULL,
+is_deleted boolean DEFAULT false NOT NULL,
+createddate timestamp without time zone DEFAULT ('now'::text)::date,
+updated_date timestamp without time zone,
+FOREIGN KEY (floor_id) REFERENCES mst_floor(floor_id)
+);
+
+CREATE TABLE mst_rstatus(
+rstatus_id SERIAL PRIMARY KEY NOT NULL,
+rstatus_name  character varying (100),
+active boolean DEFAULT true NOT NULL,
+createddate timestamp without time zone DEFAULT ('now'::text)::date,
+updated_date timestamp without time zone
+);
+
+--Room
+CREATE TABLE mst_room(
+room_id SERIAL PRIMARY KEY NOT NULL,
+room_name  character varying (100),
+room_no  character varying (100),
+room_desc  character varying (255),
+room_price character varying (50),
+room_tax character varying (50),
+room_size character varying (20),
+room_capacity character varying(20),
+rstatus_id Integer,
+rtype_id Integer,
+floor_id Integer,
+hotel_id Integer,
+active boolean DEFAULT true NOT NULL,
+is_deleted boolean DEFAULT false NOT NULL,
+createddate timestamp without time zone DEFAULT ('now'::text)::date,
+updated_date timestamp without time zone,
+FOREIGN KEY (rtype_id) REFERENCES mst_rtype(rtype_id),
+FOREIGN KEY (floor_id) REFERENCES mst_floor(floor_id),
+FOREIGN KEY (rstatus_id) REFERENCES mst_rstatus(rstatus_id),
+FOREIGN KEY (hotel_id) REFERENCES mst_hotels(hotel_id)
+);
+
+
 
 CREATE TABLE mst_products(
 product_id SERIAL PRIMARY KEY NOT NULL,

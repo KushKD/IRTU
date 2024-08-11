@@ -164,6 +164,16 @@
         <put-attribute name="content" value="/WEB-INF/jsp/hotel/updatehotel.jsp" />
     </definition>
 
+    <definition name="createroom" extends="baselayoutdashboard">
+        <put-attribute name="content" value="/WEB-INF/jsp/rooms/createroom.jsp" />
+    </definition>
+    <definition name="getRooms" extends="baselayoutdashboard">
+        <put-attribute name="content" value="/WEB-INF/jsp/rooms/viewrooms.jsp" />
+    </definition>
+    <definition name="updateRoom" extends="baselayoutdashboard">
+        <put-attribute name="content" value="/WEB-INF/jsp/rooms/updateroom.jsp" />
+    </definition>
+
     <!-- Hotel Management Ends -->
 
 
