@@ -48,7 +48,7 @@
                         </spring:bind>
 
                          <spring:bind path="amenityDescription">
-                            <div   ${status.error ? 'has-error' : ''}">
+                            <div  class="${status.error ? 'has-error' : ''}">
                                 <form:input type="text" autocomplete="off" onfocus="this.removeAttribute('readonly');" path="amenityDescription" onkeypress="return alpha(event)" oncopy="return false" onpaste="return false"     name="roomNo" placeholder="Amenity Description" ></form:input>
                                 <form:errors  path="amenityDescription"></form:errors>
                             </div>

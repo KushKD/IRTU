@@ -1,6 +1,10 @@
 package com.kcdhawan.utri.eco.app.Controllers;
 
 
+import com.kcdhawan.utri.eco.app.modal.BookForm;
+import com.kcdhawan.utri.eco.app.modules.hotel.entity.HotelEntity;
+import com.kcdhawan.utri.eco.app.modules.hotel.form.HotelForm;
+import com.kcdhawan.utri.eco.app.modules.hoteltype.HtypeEntity;
 import com.kcdhawan.utri.eco.app.modules.user.entity.UserEntity;
 import com.kcdhawan.utri.eco.app.modules.user.modal.LoggedInUserLocationSession;
 import com.kcdhawan.utri.eco.app.modules.user.service.UserService;
@@ -15,10 +19,15 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+import java.sql.Date;
+import java.sql.Timestamp;
 import java.util.Collection;
 import java.util.List;
 
@@ -39,8 +48,46 @@ public class HomeController {
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String mainpage(Model model) {
+        model.addAttribute("bookForm", new BookForm());
         return "mainpage";
     }
+
+
+
+    @RequestMapping(value = "/bookRoom", method = RequestMethod.POST)
+    public String bookRoom(@ModelAttribute("bookForm") BookForm bookForm, BindingResult bindingResult, Model model, HttpServletRequest request, HttpSession session) {
+        //roleValidator.validate(hotelForm, bindingResult);
+
+            if (bindingResult.hasErrors()) {
+
+                return "mainpage";
+            }
+            try {
+                System.out.println(bookForm.toString());
+                System.out.println(bookForm.getCheckOutDate());
+                System.out.println(bookForm.getCheckInDate());
+
+                // Save the dates to session
+                session.setAttribute("checkInDate", bookForm.getCheckInDate());
+                session.setAttribute("checkOutDate", bookForm.getCheckOutDate());
+                Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+                if (authentication == null || authentication instanceof AnonymousAuthenticationToken) {
+                  return "login";
+                } else {
+                    return "redirect:/";
+                }
+
+
+
+            } catch (Exception ex) {
+
+                model.addAttribute("serverError", ex.toString());
+                return "mainpage";
+            }
+
+    }
+
+
 
     @RequestMapping(value = "/index", method = RequestMethod.GET)
     public String homePage(Model model, HttpServletRequest request) {
@@ -72,7 +119,7 @@ public class HomeController {
 
 
        if(authority_.equalsIgnoreCase("OWNER") || authority_.equalsIgnoreCase("Admin")) { return "redirect:/dashboard";}
-       else if(authority_.equalsIgnoreCase("CUSTOMER")) { return "redirect:/customer-dashboard"; }
+       else if(authority_.equalsIgnoreCase("CUSTOMER")) { return "redirect:/dashboard"; }
 
        else { return "redirect:/vendorIndex";}
         }

@@ -58,6 +58,14 @@ public class Dashboard {
 
             UserEntity user = (UserEntity) request.getSession().getAttribute("UserData");
 
+            String checkInDate = (String) session.getAttribute("checkInDate");
+            String checkOutDate = (String) session.getAttribute("checkOutDate");
+
+            // Print the session values to the console (or log them)
+            System.out.println("User Details: " + user.toString());
+            System.out.println("Check-In Date: " + checkInDate);
+            System.out.println("Check-Out Date: " + checkOutDate);
+
 //            Double totalAumount = ordersRepository.getTotalPaymentsReceived();
 //            Long totalCustomers = userDatatableRepository.getTotalCustomers();
 //            Integer getCompletedOrders = ordersRepository.getCompletedOrders();

@@ -2,6 +2,9 @@
 <%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
 <main>
    <section class="section-hero slider">
       <div class="hero">
@@ -44,6 +47,28 @@
          </div>
       </div>
    </section>
+
+     <section>
+       <div class="container">
+          <form:form method="POST" modelAttribute="bookForm" action="${pageContext.request.contextPath}/bookRoom" class="cta-form-book-hotel meal">
+             <div><h1 class="heading-book-hotel">Book Your Room Today</h1></div>
+              <div class="dates-grid"><label class="sub-heading-book-hotel" for="checkInOutDate">Select Check-In and Check-Out Dates:</label>
+              <spring:bind path="checkIncheckOut">
+                  <div class="${status.error ? 'has-error' : ''}">
+                  <form:input type="text" autocomplete="off" onfocus="this.removeAttribute('readonly');" path="checkIncheckOut" name="checkIncheckOut" placeholder="Select Booking Dates"  id="checkInOutDate"  required="true"></form:input>
+                  <form:errors  path="checkIncheckOut"></form:errors>
+                  </div>
+              </spring:bind>
+              <br><br>
+              <button type="submit" class="btn btn--full margin-right-sm">Book Now</button>
+              <input type="hidden"  name="${_csrf.parameterName}"   value="${_csrf.token}"/>
+              <c:remove var="successMessage" scope="session" />
+             </div>
+          </form:form>
+       </div>
+
+    </section>
+
    <section class="section-featured">
       <div class="container">
          <h2 class="heading-featured-in">Featured in</h2>
@@ -554,4 +579,15 @@
          </div>
       </div>
    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+       <script>
+           flatpickr("#checkInOutDate", {
+               mode: "range",
+               dateFormat: "d-m-Y",
+               minDate: "today"  // Ensures the user cannot select a past date
+           });
+       </script>
+
+
 </main>
